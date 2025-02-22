@@ -1,0 +1,279 @@
+
+
+        * {
+            box-sizing: border-box;
+          }
+    
+          body {
+            margin: 0;
+            background-color: rgb(248, 248, 242)
+          }
+    
+          .valikko  {
+            height: 100px;
+            width: 80%;
+            margin: auto;
+            text-align: center; 
+            padding-top: 40px;
+            background-color: rgb(250, 184, 126);
+            font-size: 20px;
+            /*border-radius: 25px;*/
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            box-shadow: 5px 5px 18px grey;
+
+       
+            
+            }
+
+          
+    
+          .valikon_logo {
+            font-size: 35px;
+            font-weight: bold;
+            color: red;
+            margin-right: 70px;
+            margin-left: 20px;
+            position: relative;
+            top: -10px;
+            float: left;
+          
+          }
+
+          .burger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            padding: 10px;
+            position: absolute;
+            /*left: 250px;*/
+            
+            
+            
+
+          }
+
+          .burger-menu span {            
+            display: block;
+            width: 30px;
+            height: 8px;
+            background-color: grey;
+            border-radius: 2px;
+            
+          }
+
+          .nav-links {
+            display: flex;
+            list-style: none;
+
+          }
+    
+          ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            
+          }
+    
+          .nav-links li {
+            float: left;
+          }
+    
+          .nav-links li a {
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            
+          }
+    
+          .nav-links a:hover {
+            
+            color: rgb(255, 0, 0);
+          }
+    
+          .nav-links a:active {
+            color: white;
+          }
+          @media only screen and (max-width: 768px) {
+            .burger-menu {
+              display: flex;
+            }
+            .nav-links {
+              display: none;
+              flex-direction: column;
+              position: absolute;
+              top: 100px;
+              left: 0;
+              /*alla olevat lisätään*/
+              left: 50%;
+              transform: translateX(-50%);
+              width: 80%;
+              margin: auto;
+              background-color: rgba(250, 184, 126, 0.95);
+              /*text-align: center;*/
+              padding: 10px 0;
+              z-index: 1000;
+              font-size: 30px;
+
+            }
+            .nav-links.active {
+              display: flex;
+            }
+            .valikon_logo {
+              float: right;
+            }
+          }
+          
+        
+    
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    
+          /* img */
+          img {
+          }
+    
+          /* container */
+          .container {
+          }
+    
+          /* relative and absolute positioning with blue */
+          #blue {
+          }
+    
+          p{
+            color: black;
+            
+        }
+        main {
+          /*background-color: rgb(125, 193, 239);*/
+          
+        }
+
+        .hero-banner {
+          background-image: url("../image/self-care.jpg");
+          background-size: cover;
+          background-position: center;
+          height: 400px;
+          width: 80%;
+          margin: 40px auto;
+          position: relative;
+          border-bottom-right-radius: 10px;
+          border-bottom-left-radius: 10px;
+          margin-top: 0;
+          box-shadow: 5px 5px 18px grey;
+          
+          
+        }
+        @media only screen and (max-width: 711px) {
+          .hero-banner{
+            background-image: url("../image/health.jpg");
+          }
+          
+        }
+        
+    
+        .card {
+          
+          color: black;
+          width: 80%;
+          /*overflow: hidden;*/
+          padding: 30px;
+          border: 2px solid orange;
+          margin: 40px auto;
+          background-image: url("../image/card_backround.jpeg"); /*../ siirtyy ylemmäs css kansioon*/
+          background-size: cover;
+          background-color: rgba(255, 255, 255, 0.7);
+          background-blend-mode: overlay;
+          border-radius: 10px;
+          position: relative; 
+         
+        }
+        @media only screen and (max-width: 711px) {
+          .card {
+            background-image: url("../image/white.jpg");
+            color: rgb(2, 34, 9);
+          }
+         
+          
+        }
+    
+        .card-title {
+          color: rgb(182, 8, 63);
+          font-size: 35px;
+          padding-bottom: 10px;
+        }
+
+        @media only screen and (max-width: 711px) {
+          .card-title{
+            color: rgb(5, 109, 5);
+          }          
+        }
+        
+    
+        footer {
+          background-color:sandybrown;
+          height: 100px;
+          color: black;
+          text-align: center;
+          padding-top: 40px;
+          border-radius: 10px;
+          margin-bottom: 0;
+          
+        }
+    
+        .Slogan {
+          color: black;
+          margin-top: 50px;
+          font-size: 30px;
+          text-align: center;
+          padding-top: 20px;
+          
+        }
+    
+        #logo {
+          color: rgb(244, 94, 7);
+          font-size: 40px;
+          
+        }
+        @media only screen and (max-width:395px){
+          .Slogan {
+            font-size: 20px;
+          }
+          #logo {
+            font-size: 30px;
+          }
+          
+        }
+    
+        .gym {
+          float: left;
+          max-width: 30%;
+          height: auto;
+          margin-right: 30px;
+          overflow: hidden;
+          
+        }
+       
+
+        .gym-container {
+          position: relative;
+          overflow: hidden;
+        }
+    
+        .small_pic {
+          max-width: 15%;
+          position: absolute;
+          top: -25px;
+          right: 10px;
+          
+          
+        
+          
+        }
