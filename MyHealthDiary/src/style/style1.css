@@ -26,8 +26,6 @@
     border-top-right-radius: 25px;
     box-shadow: 5px 5px 18px grey;
 
-
-    
     }
 
   
@@ -101,7 +99,7 @@
   .nav-links a:active {
     color: white;
   }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 855px) {
     .burger-menu {
       display: flex;
     }
@@ -194,7 +192,7 @@ main {
   padding: 30px;
   border: 2px solid orange;
   margin: 40px auto;
-  background-image: url("/src/assets/card_backround.jpeg"); /*../ siirtyy ylemmäs css kansioon*/
+  background-image: url("/src/assets/card_backround.jpeg");
   background-size: cover;
   background-color: rgba(255, 255, 255, 0.7);
   background-blend-mode: overlay;
