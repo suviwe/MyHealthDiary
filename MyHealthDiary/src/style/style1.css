@@ -278,7 +278,72 @@ footer {
   top: -25px;
   right: 10px;
   
-  
+}
 
-  
+/*modaalin css*/
+/* Piilotetaan modaali oletuksena */
+.modal {
+  display: none;  /* Modaali ei näy alussa */
+  position: fixed;
+  z-index: 1000; /* Varmistaa, että se on päällimmäisenä */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7); /*Tumma tausta*/
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modaalin sisältö */
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
+  max-width: 400px;
+  box-shadow: 5px 5px 18px grey;
+}
+
+/* Sulkemisnappi */
+.close {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Sulkemisnapin hover-efekti */
+.close:hover {
+  color: red;
+}
+
+/* Lomakkeen tyylit */
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: orange;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: darkorange;
 }
