@@ -71,6 +71,10 @@ function calculateBMI(weight, height) {
     analysisElement.innerText = veryHighBmi3;
     veryHighBmi3Back.classList.add("veryHighBmi3");
   }
+
+  weightInput.value = "";
+  heightInput.value = "";
+
 }
 
 function toggleMenu() {

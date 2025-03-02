@@ -294,16 +294,23 @@ footer {
   background-color: rgba(0,0,0,0.7); /*Tumma tausta*/
   justify-content: center;
   align-items: center;
+  
 }
 
 /* Modaalin sisältö */
 .modal-content {
   background-color: white;
+  display: flex;
+  flex-direction: column;
   padding: 20px;
   border-radius: 10px;
-  width: 50%;
+  width: 90%;
   max-width: 400px;
   box-shadow: 5px 5px 18px grey;
+  gap: 5px;
+  
+  
+  
 }
 
 /* Sulkemisnappi */
@@ -323,8 +330,20 @@ footer {
 .loginForm {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
+  
 }
+
+/* Lomakkeen tyylit */
+.registerForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+}
+
+
+
 
 input {
   padding: 10px;

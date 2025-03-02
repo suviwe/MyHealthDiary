@@ -92,32 +92,52 @@
         <span class="close">&times;</span>
         <h2>Kirjaudu / Rekisteröidy</h2>
 
-        <form class="loginForm">
-          <label for="username">Nimi:</label>
+        <form id="loginForm" class="loginForm">
+          <label for="username">Käyttäjänimesi</label>
           <input
             type="text"
             id="username"
             name="username"
-            placeholder="Nimi"
+            placeholder="Käyttäjänimesi"
             required/>
-          <label for="email">Sähköposti</label>
-          <input type="text"
-          id="email"
-          name="email"
-          placeholder="Sähköposti"
-          required/>
-          <label for="password">Salasana:</label>
+          <label for="password">Salasana, vähintään 8 merkkiä:</label>
           <input
             type="password"
             id="password"
             name="password"
             placeholder="Salasana"
             required/>
-          <button type="button" id="btn-login">Kirjaudu</button>
-          <button type="button" id="btn-register">Jos et ole vielä rekistöitynyt, rekisteröidy tästä</button>
+          <button type="button" id="btn-login">Kirjaudu sisään</button>
+          <button type="button" id="btn-switch-register">Uusi käyttäjä, rekisteröidy tästä</button>
         </form>
+        <form id="registerForm" class="registerForm" style="display: none;">
+          <label for="username">Käyttäjänimesi, pitää sisältää vähintään 8 kirjainta</label>
+          <input
+            type="text"
+            id="username-register"
+            name="username"
+            placeholder="Käyttäjänimesi"
+            required/>
+          <label for="password">Salasana, vähintään 8 merkkiä:</label>
+          <input
+            type="password"
+            id="password-register"
+            name="password"
+            placeholder="Salasana"
+            required/>
+          <label for="email">Sähköposti</label>
+          <input type="text"
+            id="email-register"
+            name="email"
+            placeholder="Sähköposti"
+            required/>  
+          <button type="button" id="btn-register">Rekisteröidy</button>
+          <button type="button" id="btn-switch-login">Oletko rekisteröitynyt, kirjaudu sisään</button>
+        </form>
+
       </div>
     </div>
-    <script src="/src/modal.js"></script>
+    <script type="module" src="/src/js/modal.js"></script>
+    <script type="module" src="/src/js/auth.js"></script>
   </body>
 </html>
