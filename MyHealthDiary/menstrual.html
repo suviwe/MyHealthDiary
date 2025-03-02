@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Päiväkirja</title>
+    <link rel="stylesheet" href="/src/style/style5.css">
+</head>
+<body>
+
+    <nav class="clearfix">
+        <div class="navbar">
+            <div class="valikko">
+                <div class="valikon_logo">HyteGym</div>
+
+                <!-- Burger-menu -->
+                <div class="burger-menu" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="index.html">Etusivu</a></li>
+                    <li><a href="bmi.html">BMI-laskuri</a></li>
+                    <li><a href="main.html">Takaisin omille sivuille</a></li>
+                    <li><a href="contact.html">Yhteystiedot</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <h1>Kuukautiskiertosi</h1>
+
+        <div class="diary-container">
+            <button class="add-entry">Lisää uusi merkintä</button>
+            <button class="fetch-entries">Hae kaikki merkinnät</button>
+
+            <div class="entries-list">
+                <!-- Tänne tulevat merkinnät, kun käyttäjä hakee ne -->
+            </div>
+        </div>
+    </main>
+
+    <script src="/src/js/main.js"></script>
+</body>
+</html>
