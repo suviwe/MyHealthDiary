@@ -114,6 +114,10 @@
       }
     }
 
+body {
+  background-color: rgb(248,248,242)
+}
+
 /*päiväkirjan css*/
 
 h1 {
@@ -121,7 +125,9 @@ h1 {
     font-style: italic;
     color: rgb(207, 131, 9);
     font-size: 60px;
+   
 }
+
 .diary-container {
     font-size: 25px;
     font-style: italic;
@@ -129,13 +135,15 @@ h1 {
 }
 #diary-form {
     display: flex;
-    background-color: lightyellow;
-    width: 40%;   
+    
+    background-color: rgb(252, 219, 179);
+    width: 50%;   
     flex-direction: column;
     margin: auto;
-    border: 12px solid rgb(181, 179, 179);
+    border: 12px solid rgb(231, 225, 225);
     border-radius: 15px;
     padding: 20px;
+    box-shadow: 11px 8px 20px 0px rgba(2, 2, 2, 0.3);
     
 }
 #diary-form label {
@@ -150,6 +158,7 @@ h1 {
     padding: 15px;
     margin: auto;
     font-size: 15px;
+    background-color: rgba(207, 131, 9, 0.411);
 }
 textarea {
     margin-bottom: 20px;
@@ -175,4 +184,159 @@ textarea {
 
 .mood-intensity input:checked + label {
     transform: scale(1.3); /* Korostaa valitun hymiön */
+}
+
+
+.fetch-entries {
+  margin: auto;
+  display: flex;
+  font-size: 20px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  background-color: rgba(207, 131, 9, 0.592);
+  border: none;
+  cursor: pointer;
+}
+
+.fetch-entries:hover {
+  background-color: #fd8e18; /* Tumma oranssi, kun hiiri menee päälle */
+}  
+
+
+/*korttien css*/
+.card-area {
+  /*background-color: #dddddd;*/
+  display: flex;
+  gap: 20px; /* Lisätään hieman isompi väli korttien väliin */
+  justify-content: center;
+  flex-wrap: wrap; /* Sallii korttien menevän vierekkäin niin paljon kuin mahtuu */
+  padding: 20px;
+}
+
+.card {
+  min-height: 250px;
+  width: 300px;
+  /*background-color: #e8e9fd;*/
+  background-color: rgb(251, 221, 193);
+  display: flex; /* Flexbox kortin sisällä */
+  flex-direction: row; /* Kuvan ja tekstin vierekkäin */
+  padding: 1em;
+  box-shadow: 11px 8px 20px 0px rgba(2, 2, 2, 0.3);
+  border-radius: 15px;
+  gap: 20px;
+  align-items: center; /* Keskitä kuva ja teksti pystysuunnassa */
+  
+}
+
+/* Vasen puoli - Kuvan leveys säädetty */
+.card-img {
+  flex: 1; /* Vasen puoli ottaa yhden osan flexistä */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-img img {
+  width: 120px; /* Kuvan koko säädetty */
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Oikea puoli - Tekstit */
+.card-diary {
+  flex: 3; /* Oikea puoli ottaa enemmän tilaa */
+  padding: 10px;
+  font-size: 15px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%; /* Varmistaa, että teksti ei ylitä kortin leveyttä */
+  white-space: normal; /* Varmistaa, että teksti rivityy */
+  
+}
+
+.card-diary p {
+  margin: 5px 0;
+  font-size: 14px;
+  overflow-wrap: break-word;
+}
+/*korttien nappien css*/
+.card-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  
+}
+
+.card-buttons button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  border: solid 2px rgb(71, 70, 70);
+}
+
+.card-buttons .edit-entry {
+  background-color: #fcf0ab;
+}
+
+.card-buttons .delete-entry {
+  background-color: #f99187;
+  
+}
+
+/* Muokkaustila (lomakkeelle) */
+#diary-form.editing-mode {
+  background-color: #ffe4b5;  /* Persikanvärinen tausta */
+  border: 3px solid #ff8c00;  /* Oranssi reunaviiva */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Muokkaustilan nappi */
+.editing-mode #save-entry {
+  background-color: #ff8c00;  /* Oranssi nappi */
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+
+/*tilastot css*/
+
+#stats {
+  margin-top: 20px;
+  text-align: center;
+  
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.stat-card {
+  background-color: #f3f3f3;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  width: 200px;
+}
+
+.stat-card h3 {
+  margin-bottom: 5px;
+}
+
+#fetch-stats {
+  background-color: #ff8500;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#fetch-stats:hover {
+  background-color: #e67300;
 }

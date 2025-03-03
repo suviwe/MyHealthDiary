@@ -10,6 +10,7 @@
 const fetchData = async (url, options = {}) => {
     try {
       const response = await fetch(url, options);
+      console.log("backend vastaus:", response)
   
       if (!response.ok) {
         const errorData = await response.json();

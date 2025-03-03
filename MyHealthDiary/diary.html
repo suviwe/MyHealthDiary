@@ -29,33 +29,51 @@
             </div>
         </div>
     </nav>
+    <section id="stats">
+        <h2>Haluatko tietää keskimääräiset unituntisi ja askelmääräsi?</h2>
+        <p>Paina "Päivitä tilastot", niin näet yhteenvedon päiväkirjamerkinnöistäsi.</p>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <h3>Uni</h3>
+                <p id="sleep-stat">Ladataan...</p>
+            </div>
+            <div class="stat-card">
+                <h3>Askeleet</h3>
+                <p id="steps-stat">Ladataan...</p>
+            </div>
+        </div>
+        <button id="fetch-stats">Päivitä tilastot</button>
+    </section>
+    
 
     <main>
         <h1>Päiväkirja</h1>
+            <button class="fetch-entries">Etsi kaikki päiväkirjamerkinnät</button>
 
         <div class="diary-container">
             <form id="diary-form">
                 <label for="entry-date">Päivämäärä:</label>
-                <input type="date" id="entry-date" name="entry-date" required>
+                <input type="date" id="entry-date" name="entry_date" required>
             
                 <label for="mood">Mieliala:</label>
-                <input type="text" id="mood" name="mood" placeholder="Kerro fiiliksesi päivästä" required>
+                <input type="text" id="mood" name="mood" placeholder="Kerro fiiliksesi päivästä">
             
                 <label for="mood-intensity">Mielialan intensiteetti</label>
                 <div class="mood-intensity">
-                    <input type="radio" id="mood1" name="mood-intensity" value="1">
+                    <input type="radio" id="mood1" name="mood_intensity" value="1">
                     <label for="mood1">😞</label>
             
-                    <input type="radio" id="mood2" name="mood-intensity" value="2">
+                    <input type="radio" id="mood2" name="mood_intensity" value="2">
                     <label for="mood2">😟</label>
             
-                    <input type="radio" id="mood3" name="mood-intensity" value="3">
+                    <input type="radio" id="mood3" name="mood_intensity" value="3">
                     <label for="mood3">😐</label>
             
-                    <input type="radio" id="mood4" name="mood-intensity" value="4">
+                    <input type="radio" id="mood4" name="mood_intensity" value="4">
                     <label for="mood4">😊</label>
             
-                    <input type="radio" id="mood5" name="mood-intensity" value="5">
+                    <input type="radio" id="mood5" name="mood_intensity" value="5">
                     <label for="mood5">😃</label>
                 </div>
             
@@ -64,10 +82,10 @@
                 <input type="number" id="weight" name="weight" step="0.1">
             
                 <label for="sleep-hours">Uni (tunnit):</label>
-                <input type="number" id="sleep-hours" name="sleep-hours" min="0" max="24">
+                <input type="number" id="sleep-hours" name="sleep_hours" min="0" max="24">
             
-                <label for="water-intake">Veden juonti (ml):</label>
-                <input type="number" id="water-intake" name="water-intake" min="0">
+                <label for="water_intake">Veden juonti (ml):</label>
+                <input type="number" id="water-intake" name="water_intake" min="0">
             
                 <label for="steps">Askeleet:</label>
                 <input type="number" id="steps" name="steps" min="0">
@@ -75,18 +93,20 @@
                 <label for="notes">Muistiinpanot:</label>
                 <textarea id="notes" name="notes" rows="3"></textarea>
             
-                <button id="save-entry" type="submit">Tallenna merkintä</button>
+                <button id="save-entry" type="submit">Tallenna uusi merkintä</button>
             </form>
             
             <!-- Nappi päiväkirjamerkintöjen hakemiseen -->
-            <button class="fetch-entries">Etsi kaikki päiväkirjamerkinnät</button>
+            <!--<button class="fetch-entries">Etsi kaikki päiväkirjamerkinnät</button>-->
 
-            <div class="diary-entries">
+            <section class="card-area" id="diary">
                 <!-- Tänne tulevat merkinnät, kun käyttäjä hakee ne -->
-            </div>
+            </section>
         </div>
     </main>
+    
+    <script type="module" src="/src/js/diary.js"></script>
 
-    <script src="/src/js/main.js"></script>
+    <!--<script src="/src/js/main.js"></script>-->
 </body>
 </html>
