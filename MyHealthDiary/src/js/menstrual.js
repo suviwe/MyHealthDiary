@@ -1,0 +1,232 @@
+import { fetchData } from "./fetch.js";
+
+const saveMenstrualEntry = async (event) => {
+    event.preventDefault();
+
+    const token = localStorage.getItem("token");
+    /*if (!token) {
+        alert("Kirjaudu sisään tallentaaksesi merkinnän.");
+        return;
+    }*/
+
+    const cycleData = {
+        start_date: document.querySelector("#start-date").value,
+        symptoms: document.querySelector("#symptoms").value.trim(),
+        notes: document.querySelector("#notes").value.trim()
+    };
+
+
+    // Lisätään end_date vain, jos käyttäjä on syöttänyt sen
+    const endDate = document.querySelector("#end-date").value;
+    if (endDate) {
+        cycleData.end_date = endDate;
+    }
+
+    try {
+        const response = await fetch("http://localhost:3000/api/cycle", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${token}`
+            },
+            body: JSON.stringify(cycleData)
+        });
+
+        if (!response.ok) throw new Error("Virhe merkinnän tallennuksessa.");
+
+        alert("Merkintä tallennettu!");
+        menstrualForm.reset();
+    } catch (error) {
+        console.error("Tallennusvirhe:", error);
+    }
+};
+
+//Lisää event listener lomakkeelle
+const menstrualForm = document.querySelector("#menstrual-form");
+if (menstrualForm) {
+    menstrualForm.addEventListener("submit", saveMenstrualEntry);
+}
+
+/*
+//Hae kaikki merkinnät
+document.getElementById("fetch-all-cycles").addEventListener("click", async () => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+        alert("Kirjaudu sisään hakeaksesi merkinnät.");
+        return;
+    }
+
+    try {
+        const response = await fetch("http://localhost:3000/api/cycle", {
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${token}`
+            }
+        });
+
+        if (!response.ok) throw new Error("Virhe haettaessa merkintöjä.");
+
+        const cycles = await response.json();
+        const entriesList = document.getElementById("stats-output");
+        entriesList.innerHTML = "<h3>Kaikki kuukautiskierron merkinnät:</h3>";
+
+        cycles.forEach(cycle => {
+            const p = document.createElement("p");
+            p.innerHTML = `<strong>${cycle.start_date}</strong> - ${cycle.end_date || "Käynnissä"} | Oireet: ${cycle.symptoms || "Ei oireita"}`;
+            entriesList.appendChild(p);
+        });
+
+    } catch (error) {
+        console.error("Hakeminen epäonnistui:", error);
+    }
+}); */
+
+const displayMenstrualEntries = (entries) => {
+    const entryContainer = document.getElementById('stats-output');
+    entryContainer.innerHTML = ''; // Tyhjennetään vanhat merkinnät
+
+    if (entries.length === 0) {
+        entryContainer.innerHTML = "<p>Ei vielä merkintöjä.</p>";
+        return;
+    }
+
+    entries.forEach(entry => {
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        const cardContent = document.createElement("div");
+        cardContent.classList.add("card-content");
+
+        cardContent.innerHTML = `
+            <p><strong>Alkamispäivä:</strong> ${entry.start_date}</p>
+            <p><strong>Päättymispäivä:</strong> ${entry.end_date || "Käynnissä"}</p>
+            <p><strong>Oireet:</strong> ${entry.symptoms || "Ei oireita"}</p>
+            <p><strong>Muistiinpanot:</strong> ${entry.notes || "Ei muistiinpanoja"}</p>
+        `;
+
+        // Luo Muokkaa-nappi
+        const editButton = document.createElement("button");
+        editButton.textContent = "Muokkaa";
+        editButton.classList.add("edit-entry");
+        editButton.addEventListener("click", () => editEntry(entry));
+
+        // Lisää napit korttiin
+        const buttonsDiv = document.createElement("div");
+        buttonsDiv.classList.add("card-buttons");
+        buttonsDiv.appendChild(editButton);
+
+        card.appendChild(cardContent);
+        card.appendChild(buttonsDiv);
+        entryContainer.appendChild(card);
+    });
+};
+const editEntry = (entry) => {
+    document.querySelector("#start-date").value = entry.start_date;
+    document.querySelector("#end-date").value = entry.end_date || "";
+    document.querySelector("#symptoms").value = entry.symptoms || "";
+    document.querySelector("#notes").value = entry.notes || "";
+
+    // Tallennetaan ID piilotettuun kenttään
+    document.querySelector("#menstrual-form").dataset.id = entry.cycle_id;
+    document.querySelector("#menstrual-form").classList.add("editing-mode");
+    document.querySelector("#menstrual-form").scrollIntoView({ behavior: "smooth", block: "start" });
+
+    // Piilota Tallenna-nappi ja näytä Päivitä-nappi
+    document.querySelector("#save-cycle").style.display = "none";
+    document.querySelector("#update-cycle").style.display = "block";
+};
+
+
+
+//Hae kiertojen pituudet
+document.getElementById("fetch-all-cycles").addEventListener("click", async () => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+        alert("Kirjaudu sisään hakeaksesi kierron pituudet.");
+        return;
+    }
+
+    try {
+        const response = await fetch("http://localhost:3000/api/cycle/stats/cycle-lengths", {
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${token}`
+            }
+        });
+
+        if (!response.ok) throw new Error("Virhe haettaessa kierron pituuksia.");
+
+        const cycles = await response.json();
+        displayMenstrualEntries(cycles); // Kutsutaan funktiota, joka näyttää merkinnät korteissa
+
+    } catch (error) {
+        console.error("Hakeminen epäonnistui:", error);
+    }
+        /*const lengths = await response.json();
+        const list = document.getElementById("stats-output");
+        list.innerHTML = "<h3>Kiertojen pituudet:</h3>";
+
+        lengths.forEach(item => {
+            const p = document.createElement("p");
+            p.textContent = `Kierto: ${item.cycle_length} päivää`;
+            list.appendChild(p);
+        });
+
+    } catch (error) {
+        console.error("Virhe:", error);
+    } */
+});
+
+//Hae keskimääräinen kierron pituus
+document.getElementById("fetch-average-cycle").addEventListener("click", async () => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+        alert("Kirjaudu sisään hakeaksesi keskimääräisen kierron pituuden.");
+        return;
+    }
+
+    try {
+        const response = await fetch("http://localhost:3000/api/cycle/stats/average-cycle-length", {
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${token}`
+            }
+        });
+
+        if (!response.ok) throw new Error("Virhe haettaessa keskimääräistä kierron pituutta.");
+
+        const data = await response.json();
+        document.getElementById("stats-average-output").innerHTML = `<h3>Keskimääräinen kierto:</h3><p>${data.avg_cycle_length} päivää</p>`;
+
+    } catch (error) {
+        console.error("Virhe:", error);
+    }
+});
+
+//Hae kiertojen pituudet
+document.getElementById("fetch-cycle-lengths").addEventListener("click", async () => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+        alert("Kirjaudu sisään hakeaksesi keskimääräisen kierron pituuden.");
+        return;
+    }
+
+    try {
+        const response = await fetch("http://localhost:3000/api/cycle/stats/average-cycle-length", {
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${token}`
+            }
+        });
+
+        if (!response.ok) throw new Error("Virhe haettaessa keskimääräistä kierron pituutta.");
+
+        const data = await response.json();
+        document.getElementById("stats-lengths-output").innerHTML = `<h3>Kiertojesi pituudet:</h3><p>${item.cycle_length} päivää</p>`;
+
+    } catch (error) {
+        console.error("Virhe:", error);
+    }
+});
+
+

@@ -2,7 +2,10 @@
 import {fetchData} from './fetch.js';
 
 
-
+function toggleMenu() {
+    let menu = document.querySelector(".nav-links");
+    menu.classList.toggle("active");
+  }
 
 //Rekisteröintipyyntö
 document.addEventListener('registerRequest', async function(event) {
@@ -130,7 +133,6 @@ document.addEventListener('loginRequest', async function(event) {
 
     };
  
-
-
+   
 
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Päiväkirja</title>
-    <link rel="stylesheet" href="/src/style/style5.css">
+    <link rel="stylesheet" href="/src/style/style6.css">
 </head>
 <body>
 
@@ -21,28 +21,70 @@
                 </div>
 
                 <ul class="nav-links">
-                    <li><a href="index.html">Etusivu</a></li>
-                    <li><a href="bmi.html">BMI-laskuri</a></li>
+                    <!--<li><a href="index.html">Etusivu</a></li>-->
+                    <!--<li><a href="bmi.html">BMI-laskuri</a></li>-->
                     <li><a href="main.html">Takaisin omille sivuille</a></li>
-                    <li><a href="contact.html">Yhteystiedot</a></li>
+                    <!--<li><a href="contact.html">Yhteystiedot</a></li>-->
                 </ul>
             </div>
         </div>
     </nav>
 
+    
     <main>
-        <h1>Kuukautiskiertosi</h1>
+        <h1>Kuukautiskierron seuranta</h1>
 
-        <div class="diary-container">
-            <button class="add-entry">Lisää uusi merkintä</button>
-            <button class="fetch-entries">Hae kaikki merkinnät</button>
+        <div class="container">
+            <!-- Vasen puoli (lomake) -->
+            <div class="form-container">
+                <h2>Lisää uusi merkintä</h2>
+                <form id="menstrual-form">
+                    <label for="start-date">Kuukautisten alkamispäivä:</label>
+                    <input type="date" id="start-date" name="start_date" required>
 
-            <div class="entries-list">
-                <!-- Tänne tulevat merkinnät, kun käyttäjä hakee ne -->
+                    <label for="end-date">Kuukautisten päättymispäivä (jos tiedossa):</label>
+                    <input type="date" id="end-date" name="end_date">
+
+                    <label for="symptoms">Oireet:</label>
+                    <textarea id="symptoms" name="symptoms" rows="3" placeholder="Esim. kramppia, päänsärkyä..."></textarea>
+
+                    <label for="notes">Muistiinpanot:</label>
+                    <textarea id="notes" name="notes" rows="3" placeholder="Lisähuomioita"></textarea>
+
+                    <button id="save-cycle" type="submit">Tallenna merkintä</button>
+                </form>
             </div>
+            
+
+            <!-- Oikea puoli (tilastot) -->
+            <div class="stats-container">
+                <h2>Tilastot</h2>
+                <button id="fetch-all-cycles">Näytä kaikki merkinnät</button>
+
+                <button id="fetch-cycle-lengths">Näytä kiertojen pituudet</button>
+                <button id="fetch-average-cycle">Keskimääräinen kiertosi pituus</button>
+
+                <section>
+                    <div id="stats-average-output">
+                        <p>keskimääräinen kierron pituus näkyy tässä</p>
+                    </div>
+                    <div id="stats-lengths-output">
+                        <p>Kiertojen pituudet näkyvät tässä</p>
+                    </div>
+                </section>
+
+            </div>   
+
+            
         </div>
+        <section>
+            <div id="stats-output">
+                <p>Tiedot näkyvät tässä...</p>
+            </div>
+
+        </section>
     </main>
 
-    <script src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/menstrual.js"></script>
 </body>
 </html>

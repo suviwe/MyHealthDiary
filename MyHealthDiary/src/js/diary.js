@@ -1,4 +1,6 @@
-  
+
+
+
 import { fetchData } from "./fetch.js";
 
 
@@ -141,7 +143,7 @@ const getEntries = async () => {
     const diaryContainer = document.getElementById('diary');
     console.log(diaryContainer);
 
-    // Haetaan token, koska reitti voi olla suojattu
+    // Haetaan token
     const token = localStorage.getItem("token");
     if (!token) {
         alert("Kirjaudu sisään hakeaksesi päiväkirjamerkinnät.");
@@ -280,22 +282,56 @@ const editEntry = (entry) => {
     document.querySelector("#diary-form").classList.add("editing-mode");
     document.querySelector("#diary-form").scrollIntoView({ behavior: "smooth", block: "start" });
 
-    // Vaihdetaan lomakkeen toiminnallisuus "Muokkaa"-tilaan
-    document.querySelector("#save-entry").textContent = "Päivitä merkintä";
-    document.querySelector("#save-entry").onclick = () => updateEntry(entry.entry_Id);
+
+    //muokkaa napit
+    document.querySelector("#save-entry").style.display = "none";  // Piilotetaan Tallenna-nappi
+    document.querySelector("#update-entry").style.display = "block";  // Näytetään Päivitä-nappi
+
 };
 
+const updateEntry = async () => {
+    const entryId = document.querySelector("#diary-form").dataset.id;
+    console.log("Päivitetään merkintää, entryId:", entryId);
+    if (!entryId) {
+        console.error("Päivitys epäonnistui: entryId puuttuu.");
+        return;
+    }
 
-const updateEntry = async (entryId) => {
-    console.log("päivitetään merkintää")
     const token = localStorage.getItem("token");
     if (!token) {
         alert("Kirjaudu sisään muokataksesi merkintää.");
         return;
     }
 
-    
-    const updatedEntry = {
+        const updatedEntry = {};
+
+        const entryDate = document.querySelector("#entry-date").value;
+        if (entryDate) updatedEntry.entry_date = entryDate;
+
+        const mood = document.querySelector("#mood").value;
+        if (mood) updatedEntry.mood = mood;
+
+        const moodIntensity = document.querySelector('input[name="mood_intensity"]:checked');
+        if (moodIntensity) updatedEntry.mood_intensity = parseInt(moodIntensity.value);
+
+        const weight = document.querySelector("#weight").value;
+        if (weight) updatedEntry.weight = parseFloat(weight);
+
+        const sleepHours = document.querySelector("#sleep-hours").value;
+        if (sleepHours) updatedEntry.sleep_hours = parseFloat(sleepHours);
+
+        const waterIntake = document.querySelector("#water-intake").value;
+        if (waterIntake) updatedEntry.water_intake = parseInt(waterIntake);
+
+        const steps = document.querySelector("#steps").value;
+        if (steps) updatedEntry.steps = parseInt(steps);
+
+        const notes = document.querySelector("#notes").value;
+        if (notes) updatedEntry.notes = notes;
+
+
+    // Hae tiedot lomakkeesta
+    /*const updatedEntry = {
         entry_date: document.querySelector("#entry-date").value,
         mood: document.querySelector("#mood").value,
         mood_intensity: parseInt(document.querySelector('input[name="mood_intensity"]:checked').value),
@@ -304,7 +340,8 @@ const updateEntry = async (entryId) => {
         water_intake: parseInt(document.querySelector("#water-intake").value),
         steps: parseInt(document.querySelector("#steps").value),
         notes: document.querySelector("#notes").value
-    };
+        
+    };*/
 
     const url = `http://localhost:3000/api/diary/${entryId}`;
     const options = {
@@ -315,50 +352,31 @@ const updateEntry = async (entryId) => {
         },
         body: JSON.stringify(updatedEntry)
     };
+
     try {
         const response = await fetch(url, options);
         if (!response.ok) throw new Error("Virhe päivittäessä merkintää.");
 
-        const data = await response.json();
-        console.log("Päivitys onnistui:", data);
+        alert("Merkintä päivitetty!");
+        document.querySelector("#diary-form").reset();
+        document.querySelector("#diary-form").classList.remove("editing-mode");
 
-        // 🔹 **Päivitetään UI ilman hakua**
-        const entryCard = document.querySelector(`[data-id="${entryId}"]`);
-        if (entryCard) {
-            entryCard.innerHTML = `
-                <p><strong>Päivämäärä:</strong> ${updatedEntryData.entry_date}</p>
-                <p><strong>Mieliala:</strong> ${updatedEntryData.mood}</p>
-                <p><strong>Mielialan-intensiteetti:</strong> ${updatedEntryData.mood_intensity}</p>
-                <p><strong>Paino:</strong> ${updatedEntryData.weight} kg</p>
-                <p><strong>Uni:</strong> ${updatedEntryData.sleep_hours} tuntia</p>
-                <p><strong>Vedenjuonti:</strong> ${updatedEntryData.water_intake}</p>
-                <p><strong>Askeleet:</strong> ${updatedEntryData.steps}</p>
-                <p><strong>Muistiinpanot:</strong> ${updatedEntryData.notes}</p>
-                <button class="edit-btn" onclick="editEntry(${entryId})">Muokkaa</button>
-                <button class="delete-btn" onclick="deleteEntry(${entryId})">Poista</button>
-            `;
-        }
+        // Palautetaan napit normaaliksi
+        document.querySelector("#save-entry").style.display = "block";  // Näytetään taas Tallenna-nappi
+        document.querySelector("#update-entry").style.display = "none";  // Piilotetaan Päivitä-nappi
 
-        // 🔹 **Poistetaan muokkaustila**
-        diaryForm.classList.remove("editing-mode");
-        document.querySelector("#save-entry").textContent = "Tallenna merkintä";
-        diaryForm.reset();
-
+        getEntries(); // Päivitä merkinnät
     } catch (error) {
         console.error("Päivitysvirhe:", error);
     }
-    /*try {
-        const response = await fetch(url, options);
-        if (!response.ok) throw new Error("Virhe päivitettäessä merkintää.");
-
-        alert("Merkintä päivitetty!");
-        document.querySelector("#save-entry").textContent = "Tallenna merkintä";
-        document.querySelector("#save-entry").onclick = saveEntry;
-        getEntries(); // Päivitä kortit
-    } catch (error) {
-        console.error("Päivitysvirhe:", error);
-    }*/
 };
+
+// Lisää event listener Päivitä-napille 
+document.querySelector("#update-entry").addEventListener("click", updateEntry);
+
+
+
+
 
 /*tilastot */
 const getStats = async () => {
