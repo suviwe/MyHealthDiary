@@ -47,7 +47,7 @@ if (menstrualForm) {
     menstrualForm.addEventListener("submit", saveMenstrualEntry);
 }
 
-/*
+
 //Hae kaikki merkinnät
 document.getElementById("fetch-all-cycles").addEventListener("click", async () => {
     const token = localStorage.getItem("token");
@@ -67,19 +67,13 @@ document.getElementById("fetch-all-cycles").addEventListener("click", async () =
         if (!response.ok) throw new Error("Virhe haettaessa merkintöjä.");
 
         const cycles = await response.json();
-        const entriesList = document.getElementById("stats-output");
-        entriesList.innerHTML = "<h3>Kaikki kuukautiskierron merkinnät:</h3>";
-
-        cycles.forEach(cycle => {
-            const p = document.createElement("p");
-            p.innerHTML = `<strong>${cycle.start_date}</strong> - ${cycle.end_date || "Käynnissä"} | Oireet: ${cycle.symptoms || "Ei oireita"}`;
-            entriesList.appendChild(p);
-        });
+        displayMenstrualEntries(cycles);
+       
 
     } catch (error) {
         console.error("Hakeminen epäonnistui:", error);
     }
-}); */
+}); 
 
 const displayMenstrualEntries = (entries) => {
     const entryContainer = document.getElementById('stats-output');
@@ -97,9 +91,13 @@ const displayMenstrualEntries = (entries) => {
         const cardContent = document.createElement("div");
         cardContent.classList.add("card-content");
 
+        // Lisätään kierron pituus, mutta vain jos se on saatavilla
+        const cycleLengthText = entry.cycle_length ? `${entry.cycle_length} päivää` : "Ei saatavilla";
+
         cardContent.innerHTML = `
             <p><strong>Alkamispäivä:</strong> ${entry.start_date}</p>
             <p><strong>Päättymispäivä:</strong> ${entry.end_date || "Käynnissä"}</p>
+            <p><strong>Kierron pituus:</strong> ${cycleLengthText}</p>
             <p><strong>Oireet:</strong> ${entry.symptoms || "Ei oireita"}</p>
             <p><strong>Muistiinpanot:</strong> ${entry.notes || "Ei muistiinpanoja"}</p>
         `;
@@ -138,44 +136,6 @@ const editEntry = (entry) => {
 
 
 
-//Hae kiertojen pituudet
-document.getElementById("fetch-all-cycles").addEventListener("click", async () => {
-    const token = localStorage.getItem("token");
-    if (!token) {
-        alert("Kirjaudu sisään hakeaksesi kierron pituudet.");
-        return;
-    }
-
-    try {
-        const response = await fetch("http://localhost:3000/api/cycle/stats/cycle-lengths", {
-            method: "GET",
-            headers: {
-                "Authorization": `Bearer ${token}`
-            }
-        });
-
-        if (!response.ok) throw new Error("Virhe haettaessa kierron pituuksia.");
-
-        const cycles = await response.json();
-        displayMenstrualEntries(cycles); // Kutsutaan funktiota, joka näyttää merkinnät korteissa
-
-    } catch (error) {
-        console.error("Hakeminen epäonnistui:", error);
-    }
-        /*const lengths = await response.json();
-        const list = document.getElementById("stats-output");
-        list.innerHTML = "<h3>Kiertojen pituudet:</h3>";
-
-        lengths.forEach(item => {
-            const p = document.createElement("p");
-            p.textContent = `Kierto: ${item.cycle_length} päivää`;
-            list.appendChild(p);
-        });
-
-    } catch (error) {
-        console.error("Virhe:", error);
-    } */
-});
 
 //Hae keskimääräinen kierron pituus
 document.getElementById("fetch-average-cycle").addEventListener("click", async () => {
@@ -197,32 +157,6 @@ document.getElementById("fetch-average-cycle").addEventListener("click", async (
 
         const data = await response.json();
         document.getElementById("stats-average-output").innerHTML = `<h3>Keskimääräinen kierto:</h3><p>${data.avg_cycle_length} päivää</p>`;
-
-    } catch (error) {
-        console.error("Virhe:", error);
-    }
-});
-
-//Hae kiertojen pituudet
-document.getElementById("fetch-cycle-lengths").addEventListener("click", async () => {
-    const token = localStorage.getItem("token");
-    if (!token) {
-        alert("Kirjaudu sisään hakeaksesi keskimääräisen kierron pituuden.");
-        return;
-    }
-
-    try {
-        const response = await fetch("http://localhost:3000/api/cycle/stats/average-cycle-length", {
-            method: "GET",
-            headers: {
-                "Authorization": `Bearer ${token}`
-            }
-        });
-
-        if (!response.ok) throw new Error("Virhe haettaessa keskimääräistä kierron pituutta.");
-
-        const data = await response.json();
-        document.getElementById("stats-lengths-output").innerHTML = `<h3>Kiertojesi pituudet:</h3><p>${item.cycle_length} päivää</p>`;
 
     } catch (error) {
         console.error("Virhe:", error);
