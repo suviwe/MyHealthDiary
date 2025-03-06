@@ -49,6 +49,7 @@ if (menstrualForm) {
 
 
 //Hae kaikki merkinnät
+/*
 document.getElementById("fetch-all-cycles").addEventListener("click", async () => {
     const token = localStorage.getItem("token");
     if (!token) {
@@ -64,16 +65,81 @@ document.getElementById("fetch-all-cycles").addEventListener("click", async () =
             }
         });
 
+        console.log("palvelimen virhe vastaus", response);
+
         if (!response.ok) throw new Error("Virhe haettaessa merkintöjä.");
 
         const cycles = await response.json();
+        console.log("haetut merkinnät", cycles);
+
+        // Tarkistetaan, onko käyttäjällä merkintöjä
+        if (cycles.length === 0) {
+            alert("Sinulla ei ole vielä merkintöjä. Lisää uusi merkintä!");
+            return;  // Lopetetaan suoritus, jotta tyhjiä merkintöjä ei yritetä näyttää
+        }
+
+        // Jos merkintöjä on, näytetään ne
+        displayMenstrualEntries(cycles);
+
+    } catch (error) {
+        console.error("Hakeminen epäonnistui:", error);
+        alert("Tapahtui virhe haettaessa merkintöjä.");
+    }
+});*/
+        
+        /*const cycles = await response.json();
         displayMenstrualEntries(cycles);
        
 
     } catch (error) {
         console.error("Hakeminen epäonnistui:", error);
     }
-}); 
+}); */
+
+// Funktio: Hakee käyttäjän kaikki kuukautiskierron merkinnät
+const fetchMenstrualCycles = async () => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+        alert("Kirjaudu sisään hakeaksesi kuukautiskierron merkinnät.");
+        return;
+    }
+
+    try {
+        const response = await fetch("http://localhost:3000/api/cycle", {
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${token}`
+            }
+        });
+
+        // Tarkistetaan, löytyykö merkintöjä
+        if (response.status === 404) {
+            alert("Sinulla ei ole vielä kuukautiskierron merkintöjä. Lisää uusi merkintä!");
+            return;
+        }
+
+        if (!response.ok) {
+            throw new Error("Virhe haettaessa kuukautiskierron merkintöjä.");
+        }
+
+        const cycles = await response.json();
+
+        // Jos listassa ei ole merkintöjä
+        if (cycles.length === 0) {
+            alert("Sinulla ei ole vielä kuukautiskierron merkintöjä. Lisää uusi merkintä!");
+            return;
+        }
+
+        displayMenstrualEntries(cycles); // Näytetään merkinnät käyttäjälle
+    } catch (error) {
+        console.error("Virhe merkintöjen haussa:", error);
+        alert("Tapahtui virhe haettaessa kuukautiskierron merkintöjä.");
+    }
+};
+
+
+document.getElementById("fetch-all-cycles").addEventListener("click", fetchMenstrualCycles);
+
 
 const displayMenstrualEntries = (entries) => {
     const entryContainer = document.getElementById('stats-output');
@@ -95,8 +161,8 @@ const displayMenstrualEntries = (entries) => {
         const cycleLengthText = entry.cycle_length ? `${entry.cycle_length} päivää` : "Ei saatavilla";
 
         cardContent.innerHTML = `
-            <p><strong>Alkamispäivä:</strong> ${entry.start_date}</p>
-            <p><strong>Päättymispäivä:</strong> ${entry.end_date || "Käynnissä"}</p>
+            <p><strong>Alkamispäivä:</strong> ${entry.start_date ? entry.start_date.split("T")[0] : "Ei saatavilla"}</p>
+            <p><strong>Päättymispäivä:</strong> ${entry.end_date ? entry.end_date.split("T")[0] : "Käynnissä"}</p>
             <p><strong>Kierron pituus:</strong> ${cycleLengthText}</p>
             <p><strong>Oireet:</strong> ${entry.symptoms || "Ei oireita"}</p>
             <p><strong>Muistiinpanot:</strong> ${entry.notes || "Ei muistiinpanoja"}</p>
@@ -119,8 +185,8 @@ const displayMenstrualEntries = (entries) => {
     });
 };
 const editEntry = (entry) => {
-    document.querySelector("#start-date").value = entry.start_date;
-    document.querySelector("#end-date").value = entry.end_date || "";
+    document.querySelector("#start-date").value = entry.start_date ? entry.start_date.split("T")[0] : "";
+    document.querySelector("#end-date").value = entry.end_date ? entry.end_date.split("T")[0] : "";
     document.querySelector("#symptoms").value = entry.symptoms || "";
     document.querySelector("#notes").value = entry.notes || "";
 
@@ -133,6 +199,66 @@ const editEntry = (entry) => {
     document.querySelector("#save-cycle").style.display = "none";
     document.querySelector("#update-cycle").style.display = "block";
 };
+
+const updateEntry = async () => {
+    const entryId = document.querySelector("#menstrual-form").dataset.id;
+    console.log("Päivitetään merkintää, entryId:", entryId);
+
+    if (!entryId) {
+        console.error("Päivitys epäonnistui: entryId puuttuu.");
+        return;
+    }
+
+    const token = localStorage.getItem("token");
+    if (!token) {
+        alert("Kirjaudu sisään muokataksesi merkintää.");
+        return;
+    }
+
+    // Luodaan objekti vain muokatuille kentille
+    const updatedEntry = {};
+
+    const startDate = document.querySelector("#start-date").value;
+    if (startDate) updatedEntry.start_date = startDate;
+
+    const endDate = document.querySelector("#end-date").value;
+    if (endDate) updatedEntry.end_date = endDate;
+
+    const symptoms = document.querySelector("#symptoms").value;
+    if (symptoms) updatedEntry.symptoms = symptoms;
+
+    const notes = document.querySelector("#notes").value;
+    if (notes) updatedEntry.notes = notes;
+
+    const url = `http://localhost:3000/api/cycle/${entryId}`;
+    const options = {
+        method: "PUT",
+        headers: {
+            "Authorization": `Bearer ${token}`,
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(updatedEntry)
+    };
+
+    try {
+        const response = await fetch(url, options);
+        if (!response.ok) throw new Error("Virhe päivittäessä merkintää.");
+
+        alert("Merkintä päivitetty!");
+        document.querySelector("#menstrual-form").reset();
+        document.querySelector("#menstrual-form").classList.remove("editing-mode");
+
+        // Palautetaan napit normaaliksi
+        document.querySelector("#save-cycle").style.display = "block";  // Näytetään taas Tallenna-nappi
+        document.querySelector("#update-cycle").style.display = "none";  // Piilotetaan Päivitä-nappi
+
+        fetchAllCycles(); // Haetaan ja päivitetään merkinnät uudelleen
+    } catch (error) {
+        console.error("Päivitysvirhe:", error);
+    }
+};
+// Lisää event listener Päivitä-napille 
+document.querySelector("#update-cycle").addEventListener("click", updateEntry);
 
 
 

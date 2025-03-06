@@ -115,6 +115,7 @@ document.addEventListener("diaryEntryRequest", async function (event) {
     };
 
     console.log("Lähetetään merkintä:", options);
+    alert("päiväkirja merkintä on nyt lisätty");
 
 
     // Hae data
@@ -162,15 +163,29 @@ const getEntries = async () => {
 
     try {
         const response = await fetch(url, options);
+
+        if (response.status === 404) {
+            alert("Sinulla ei ole vielä päiväkirjamerkintöjä");
+            return; // Poistutaan funktiosta ilman virheilmoitusta
+        }
+
         if (!response.ok) throw new Error("Virhe haettaessa päiväkirjamerkintöjä");
+        
 
         const entries = await response.json();
-        console.log("Haetut merkinnät:", entries);
+
+        if (entries.length === 0) {
+            alert("Sinulla ei ole vielä päiväkirjamerkintöjä");
+        } else {
+            displayEntries(entries);
+        }
+        //console.log("Haetut merkinnät:", entries);
 
         // Näytetään merkinnät korteissa
-        displayEntries(entries);
+        //displayEntries(entries);
     } catch (error) {
         console.error("Virhe merkintöjen haussa:", error);
+        alert("Tapahtui virhe haettaessa merkintöjä.");
     }
 };
 
@@ -198,14 +213,14 @@ const displayEntries = (entries) => {
         const cardDiary = document.createElement("div");
         cardDiary.classList.add("card-diary");
         cardDiary.innerHTML = `
-            <p><strong>Päivämäärä:</strong> ${entry.entry_date}</p>
-            <p><strong>Mieliala:</strong> ${entry.mood}</p>
+            <p><strong>Päivämäärä:</strong> ${entry.entry_date ? entry.entry_date.split("T")[0] : "" }</p>
+            <p><strong>Mieliala:</strong> ${entry.mood || " "}</p>
             <p><strong>Mielialan-intensiteetti:</strong> ${entry.mood_intensity}</p>
-            <p><strong>Paino:</strong> ${entry.weight} kg</p>
-            <p><strong>Uni:</strong> ${entry.sleep_hours} tuntia</p>
-            <p><strong>Vedenjuonti:</strong> ${entry.water_intake}</p>
-            <p><strong>Askeleet:</strong> ${entry.steps}</p>
-            <p><strong>Muistiinpanot:</strong> ${entry.notes}</p>
+            <p><strong>Paino:</strong> ${entry.weight || " "} kg</p>
+            <p><strong>Uni:</strong> ${entry.sleep_hours || ""} tuntia</p>
+            <p><strong>Vedenjuonti:</strong> ${entry.water_intake || ""}</p>
+            <p><strong>Askeleet:</strong> ${entry.steps || ""}</p>
+            <p><strong>Muistiinpanot:</strong> ${entry.notes || ""}</p>
         `;
         
         // Luo napit
@@ -268,7 +283,7 @@ const deleteEntry = async (entryId) => {
 
 const editEntry = (entry) => {
     // Esitäytä lomake merkinnän olremassa olevilla tiedoilla
-    document.querySelector("#entry-date").value = entry.entry_date.split("T")[0]; 
+    document.querySelector("#entry-date").value = entry.entry_date ? entry.entry_date.split("T")[0] : "" 
     document.querySelector("#mood").value = entry.mood;
     document.querySelector(`input[name="mood_intensity"][value="${entry.mood_intensity}"]`).checked = true;
     document.querySelector("#weight").value = entry.weight;

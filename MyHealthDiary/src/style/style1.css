@@ -28,6 +28,9 @@
 
     }
 
+
+      
+
   
 
   .valikon_logo {
@@ -67,7 +70,8 @@
   .nav-links {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 10px;
+    align-items: center;
 
   }
 
@@ -78,6 +82,7 @@
     overflow: hidden;
     
   }
+
 
   .nav-links li {
     float: left;

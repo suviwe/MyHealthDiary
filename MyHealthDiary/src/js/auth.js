@@ -34,8 +34,40 @@ document.addEventListener('registerRequest', async function(event) {
     };
     console.log(options);
 
+    try {
+        const response = await fetch(url, options);
+        const data = await response.json();
+
+        if (response.ok) {
+            console.log('Rekisteröinti onnistui:', data);
+
+            // 🔥 Poistetaan mahdollinen edellisen käyttäjän token
+            localStorage.removeItem("token");
+            sessionStorage.clear();
+
+            alert("Rekisteröinti onnistui! Kirjaudu nyt sisään.");
+            
+            // 🔥 Avaa kirjautumisikkuna automaattisesti
+            document.getElementById("loginModal").style.display = "flex";
+            document.getElementById("loginForm").style.display = "flex";
+            document.getElementById("registerForm").style.display = "none";
+
+        } else {
+            console.error('Rekisteröinti epäonnistui:', data.error);
+            alert('Rekisteröinti epäonnistui: ' + data.error);
+        }
+    } catch (error) {
+        console.error('Virhe rekisteröitymisessä:', error);
+        alert('Virhe rekisteröitymisessä.');
+    }
+});
+
+
+
+
+    /*
     // Hae data
-    const response = await fetchData(url, options);
+    const response = await fetch(url, options);
 
     if (response.error) {
         console.error('Error in registration', response.error);
@@ -50,7 +82,7 @@ document.addEventListener('registerRequest', async function(event) {
     //location.href = './logIn.html';  // Ohjataan käyttäjä eteenpäin dashboardille
     
 
-});
+});*/
 
 // Kirjautumispyyntö
 document.addEventListener('loginRequest', async function(event) {
@@ -78,14 +110,20 @@ document.addEventListener('loginRequest', async function(event) {
 
     // Hae data
     const response = await fetchData(url, options);
+ 
+    
 
     if (response.error) {
     console.error('Error in login:', response.error);
+    alert("virhe kirjautumisessa, tarkista käyttäjätunnus ja salasana. Uusi käyttäjä, olethan muistanut rekisteröityä");
     return;
     }
 
     console.log(response.message);
     localStorage.setItem('token', response.token);
+
+    console.log("Tallennettu token:", localStorage.getItem('token')); // Tarkistaa, tallentuiko token
+
     alert('Kirjautuminen onnistui!');
     location.href = './main.html';  // Ohjataan käyttäjä eteenpäin dashboardille
   });
@@ -133,6 +171,20 @@ document.addEventListener('loginRequest', async function(event) {
 
     };
  
-   
+    const token = localStorage.getItem("token");
+    const profileLink = document.getElementById("profile-link");
+    const logoutBtn = document.getElementById("logout-btn");
+    
+    if (token) {
+        profileLink.style.display = "block"; // Näytetään "Omat Sivut" linkki kirjautuneille
+        logoutBtn.style.display = "block";   // Näytetään "Kirjaudu ulos" linkki
+    }
+    
+    logoutBtn?.addEventListener("click", () => {
+        localStorage.removeItem("token");  // Poistetaan token
+        sessionStorage.clear();            // Varmistetaan istunnon tyhjennys
+        location.href = "index.html";      // Ohjataan käyttäjä etusivulle
+    });
+       
 
 
