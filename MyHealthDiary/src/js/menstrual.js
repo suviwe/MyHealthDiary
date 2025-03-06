@@ -1,5 +1,10 @@
 import { fetchData } from "./fetch.js";
 
+/* function toggleMenu() {
+    let menu = document.querySelector(".nav-links");
+    menu.classList.toggle("active");
+ } */
+
 const saveMenstrualEntry = async (event) => {
     event.preventDefault();
 
@@ -49,52 +54,7 @@ if (menstrualForm) {
 
 
 //Hae kaikki merkinnät
-/*
-document.getElementById("fetch-all-cycles").addEventListener("click", async () => {
-    const token = localStorage.getItem("token");
-    if (!token) {
-        alert("Kirjaudu sisään hakeaksesi merkinnät.");
-        return;
-    }
 
-    try {
-        const response = await fetch("http://localhost:3000/api/cycle", {
-            method: "GET",
-            headers: {
-                "Authorization": `Bearer ${token}`
-            }
-        });
-
-        console.log("palvelimen virhe vastaus", response);
-
-        if (!response.ok) throw new Error("Virhe haettaessa merkintöjä.");
-
-        const cycles = await response.json();
-        console.log("haetut merkinnät", cycles);
-
-        // Tarkistetaan, onko käyttäjällä merkintöjä
-        if (cycles.length === 0) {
-            alert("Sinulla ei ole vielä merkintöjä. Lisää uusi merkintä!");
-            return;  // Lopetetaan suoritus, jotta tyhjiä merkintöjä ei yritetä näyttää
-        }
-
-        // Jos merkintöjä on, näytetään ne
-        displayMenstrualEntries(cycles);
-
-    } catch (error) {
-        console.error("Hakeminen epäonnistui:", error);
-        alert("Tapahtui virhe haettaessa merkintöjä.");
-    }
-});*/
-        
-        /*const cycles = await response.json();
-        displayMenstrualEntries(cycles);
-       
-
-    } catch (error) {
-        console.error("Hakeminen epäonnistui:", error);
-    }
-}); */
 
 // Funktio: Hakee käyttäjän kaikki kuukautiskierron merkinnät
 const fetchMenstrualCycles = async () => {
@@ -252,7 +212,7 @@ const updateEntry = async () => {
         document.querySelector("#save-cycle").style.display = "block";  // Näytetään taas Tallenna-nappi
         document.querySelector("#update-cycle").style.display = "none";  // Piilotetaan Päivitä-nappi
 
-        fetchAllCycles(); // Haetaan ja päivitetään merkinnät uudelleen
+        fetchMenstrualCycles(); // Haetaan ja päivitetään merkinnät uudelleen
     } catch (error) {
         console.error("Päivitysvirhe:", error);
     }

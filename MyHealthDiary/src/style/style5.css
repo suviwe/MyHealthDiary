@@ -85,7 +85,7 @@
       color: white;
     }
   
-    @media only screen and (max-width: 855px) {
+    @media only screen and (max-width: 500px) {
       .burger-menu {
         display: flex;
       }
@@ -286,20 +286,16 @@ textarea {
   
 }
 
-/* Muokkaustila (lomakkeelle) */
-#diary-form.editing-mode {
-  background-color: #ffe4b5;  /* Persikanvärinen tausta */
-  border: 3px solid #ff8c00;  /* Oranssi reunaviiva */
-  transition: all 0.3s ease-in-out;
+#update-entry {
+  border-radius: 10px;
+  width: 40%;
+  padding: 15px;
+  margin: auto;
+  font-size: 15px;
+  background-color: rgba(228, 82, 4, 0.929);
 }
 
-/* Muokkaustilan nappi */
-.editing-mode #save-entry {
-  background-color: #ff8c00;  /* Oranssi nappi */
-  color: white;
-  font-weight: bold;
-  transition: background-color 0.3s ease-in-out;
-}
+
 
 
 /*tilastot css*/
@@ -341,3 +337,37 @@ textarea {
 #fetch-stats:hover {
   background-color: #e67300;
 }
+
+#snackbar {
+  visibility: hidden; /* Piilotetaan oletuksena */
+  position: fixed;
+  min-width: 250px;
+  background-color: #f26406;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 17px;
+  z-index: 1;
+  top: 50px;
+  
+}
+
+/* Näytetään snackbar */
+#snackbar.show {
+  visibility: visible;
+  animation: fadein-top 0.5s, fadeout-top 0.5s 2s; /* Animointi */
+}
+
+@keyframes fadein {
+  from { top: 0; opacity: 0; }
+  to { top: 30px; opacity: 1; }
+}
+
+@keyframes fadeout {
+  from { top: 30px; opacity: 1; }
+  to { top: 0; opacity: 0; }
+}
+

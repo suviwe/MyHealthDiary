@@ -85,7 +85,7 @@
       color: white;
     }
   
-    @media only screen and (max-width: 855px) {
+    @media only screen and (max-width: 1061px) {
       .burger-menu {
         display: flex;
       }

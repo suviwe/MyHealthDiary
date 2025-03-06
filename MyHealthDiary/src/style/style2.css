@@ -11,8 +11,6 @@
   height: 100px;
   width: 80%;
   margin: auto;
-  /*text-align: center; */
-  /*padding-top: 40px;*/
   padding: 0 20px;
   background-color: rgb(250, 184, 126);
   font-size: 20px;
@@ -89,7 +87,7 @@
     color: white;
   }
 
-  @media only screen and (max-width: 855px) {
+  @media only screen and (max-width: 1061px) {
     .burger-menu {
       display: flex;
     }
@@ -99,13 +97,11 @@
       position: absolute;
       top: 100px;
       left: 0;
-      /*alla olevat lisätään*/
       left: 50%;
       transform: translateX(-50%);
       width: 80%;
       margin: auto;
       background-color: rgba(250, 184, 126, 0.95);
-      /*text-align: center;*/
       padding: 10px 0;
       z-index: 1000;
       font-size: 30px;

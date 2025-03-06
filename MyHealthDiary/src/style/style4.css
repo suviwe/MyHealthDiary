@@ -7,8 +7,6 @@
     height: 100px;
     width: 80%;
     margin: auto;
-    /*text-align: center; */
-    /*padding-top: 40px;*/
     padding: 0 20px;
     background-color: rgb(250, 184, 126);
     font-size: 20px;
@@ -85,7 +83,7 @@
       color: white;
     }
   
-    @media only screen and (max-width: 855px) {
+    @media only screen and (max-width: 1061px) {
       .burger-menu {
         display: flex;
       }
@@ -122,7 +120,12 @@ h1 {
     text-align: center;
     margin: auto;
     width: 70%;
+    font-style: italic;
+    font-size: 30px;
     padding: 40px;
+    
+
+
 }
 
 h2 {
@@ -144,8 +147,16 @@ h2 {
     padding-bottom: 25px;
     border-radius: 25px;
     box-shadow:  5px 5px 15px rgba(0, 0, 0, 0.3);
-    background-image: url("/src/assets/self-care.jpg");
+    background-image: url("/src/assets/diary-back.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+
     
+}
+
+body {
+  background-color: rgb(248,248,242)
 }
 .add-diary {
     font-size: 18px;
@@ -185,6 +196,9 @@ h2 {
 
 .menstrual {
     background-color: lightpink;
+    background-image: url(/src/assets/pink-rose.jpg);
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: space-between;
     align-items: center;

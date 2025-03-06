@@ -34,9 +34,6 @@
         </div>
       </nav>
 
-      <!--<div class="clear"></div>-->
-
-      <!-- Float continues, clearing HTML KOMMENTOINTI-->
 
       <div class="hero-banner"></div>
 
@@ -93,21 +90,20 @@
       <footer>Copyright Suvi</footer>
     </div>
     
-    <!--<button id="openModal">Kirjaudu / Rekisteröidy</button>-->
     <div id="loginModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
         <h2>Kirjaudu / Rekisteröidy</h2>
 
         <form id="loginForm" class="loginForm">
-          <label for="username">Käyttäjänimesi</label>
+          <label for="username">Käyttäjänimesi:</label>
           <input
             type="text"
             id="username"
             name="username"
             placeholder="Käyttäjänimesi"
             required/>
-          <label for="password">Salasana, vähintään 8 merkkiä:</label>
+          <label for="password">Salasana:</label>
           <input
             type="password"
             id="password"
@@ -118,20 +114,26 @@
           <button type="button" id="btn-switch-register">Uusi käyttäjä, rekisteröidy tästä</button>
         </form>
         <form id="registerForm" class="registerForm" style="display: none;">
-          <label for="username">Käyttäjänimesi, pitää sisältää vähintään 8 kirjainta</label>
+          <label for="username">Käyttäjätunnus:</label>
+          <small>6-20 merkkiä, vain kirjaimia ja numeroita</small>
           <input
             type="text"
             id="username-register"
             name="username"
             placeholder="Käyttäjänimesi"
             required/>
-          <label for="password">Salasana, vähintään 8 merkkiä:</label>
+          <label for="password">Salasana:</label>
+          <small>Vähintään 8 merkkiä
+            Sisältää ison ja pienen kirjaimen
+            Sisältää numeron tain erikoismerkin
+          </small>
           <input
             type="password"
             id="password-register"
             name="password"
             placeholder="Salasana"
             required/>
+            
           <label for="email">Sähköposti</label>
           <input type="text"
             id="email-register"
@@ -146,6 +148,7 @@
     </div>
     <script src="/src/js/modal.js"></script>
     <script type="module" src="/src/js/auth.js"></script>
+    <script src="/src/js/burger.js"></script>
     
   </body>
 </html>

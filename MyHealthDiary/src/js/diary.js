@@ -4,6 +4,19 @@
 import { fetchData } from "./fetch.js";
 
 
+
+const snackbar = document.getElementById('snackbar');
+
+const showSnackbar = (message, type = '') => {
+  snackbar.innerText = message;
+  snackbar.className = `show ${type}`.trim(); // Add optional type class (e.g., 'error')
+
+  setTimeout(() => {
+    snackbar.className = snackbar.className.replace('show', '').trim();
+  }, 3000);
+};
+
+
 const diaryForm = document.querySelector("#diary-form");
 
 if (diaryForm) {
@@ -115,7 +128,7 @@ document.addEventListener("diaryEntryRequest", async function (event) {
     };
 
     console.log("Lähetetään merkintä:", options);
-    alert("päiväkirja merkintä on nyt lisätty");
+    showSnackbar("päiväkirja merkintä on nyt lisätty");
 
 
     // Hae data
@@ -345,19 +358,6 @@ const updateEntry = async () => {
         if (notes) updatedEntry.notes = notes;
 
 
-    // Hae tiedot lomakkeesta
-    /*const updatedEntry = {
-        entry_date: document.querySelector("#entry-date").value,
-        mood: document.querySelector("#mood").value,
-        mood_intensity: parseInt(document.querySelector('input[name="mood_intensity"]:checked').value),
-        weight: parseFloat(document.querySelector("#weight").value),
-        sleep_hours: parseFloat(document.querySelector("#sleep-hours").value),
-        water_intake: parseInt(document.querySelector("#water-intake").value),
-        steps: parseInt(document.querySelector("#steps").value),
-        notes: document.querySelector("#notes").value
-        
-    };*/
-
     const url = `http://localhost:3000/api/diary/${entryId}`;
     const options = {
         method: "PUT",
@@ -372,7 +372,7 @@ const updateEntry = async () => {
         const response = await fetch(url, options);
         if (!response.ok) throw new Error("Virhe päivittäessä merkintää.");
 
-        alert("Merkintä päivitetty!");
+        showSnackbar("Merkintä päivitetty!");
         document.querySelector("#diary-form").reset();
         document.querySelector("#diary-form").classList.remove("editing-mode");
 
@@ -440,6 +440,9 @@ const getStats = async () => {
 
 // Lisää eventListener nappiin, joka hakee tilastot
 document.getElementById("fetch-stats").addEventListener("click", getStats);
+
+
+
 
 
 export { getEntries };

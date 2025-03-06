@@ -85,7 +85,7 @@
       color: white;
     }
   
-    @media only screen and (max-width: 855px) {
+    @media only screen and (max-width: 500px) {
       .burger-menu {
         display: flex;
       }
@@ -164,6 +164,7 @@ body {
 .card-area {
   display: flex;
   gap: 20px ;
+  flex-wrap: wrap;
   
   
   
@@ -175,6 +176,9 @@ body {
   font-size: 15px;
   box-shadow: 2px 2px 10px;
   padding: 15px;
+  align-items: center;
+  width: 250px;
+  
   
   
 }

@@ -2,10 +2,7 @@
 import {fetchData} from './fetch.js';
 
 
-function toggleMenu() {
-    let menu = document.querySelector(".nav-links");
-    menu.classList.toggle("active");
-  }
+
 
 //Rekisteröintipyyntö
 document.addEventListener('registerRequest', async function(event) {
@@ -41,13 +38,13 @@ document.addEventListener('registerRequest', async function(event) {
         if (response.ok) {
             console.log('Rekisteröinti onnistui:', data);
 
-            // 🔥 Poistetaan mahdollinen edellisen käyttäjän token
+            
             localStorage.removeItem("token");
             sessionStorage.clear();
 
             alert("Rekisteröinti onnistui! Kirjaudu nyt sisään.");
             
-            // 🔥 Avaa kirjautumisikkuna automaattisesti
+            //Avaa kirjautumisikkuna automaattisesti
             document.getElementById("loginModal").style.display = "flex";
             document.getElementById("loginForm").style.display = "flex";
             document.getElementById("registerForm").style.display = "none";
@@ -63,26 +60,6 @@ document.addEventListener('registerRequest', async function(event) {
 });
 
 
-
-
-    /*
-    // Hae data
-    const response = await fetch(url, options);
-
-    if (response.error) {
-        console.error('Error in registration', response.error);
-        return;
-    }
-
-    console.log(response.message, 'success');
-    alert('rekisteröinti onnistui')
-    location.href = './main.html';
-    //location.reload();
-    //console.log(response.message);
-    //location.href = './logIn.html';  // Ohjataan käyttäjä eteenpäin dashboardille
-    
-
-});*/
 
 // Kirjautumispyyntö
 document.addEventListener('loginRequest', async function(event) {
@@ -124,7 +101,7 @@ document.addEventListener('loginRequest', async function(event) {
 
     console.log("Tallennettu token:", localStorage.getItem('token')); // Tarkistaa, tallentuiko token
 
-    alert('Kirjautuminen onnistui!');
+    //alert('Kirjautuminen onnistui!');
     location.href = './main.html';  // Ohjataan käyttäjä eteenpäin dashboardille
   });
 
@@ -186,5 +163,4 @@ document.addEventListener('loginRequest', async function(event) {
         location.href = "index.html";      // Ohjataan käyttäjä etusivulle
     });
        
-
 
