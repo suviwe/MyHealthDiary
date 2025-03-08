@@ -1,4 +1,4 @@
-# Yksilöprojekti Suvi Westerberg  MyHealthDiary
+# Yksilöprojekti Suvi Westerberg,  MyHealthDiary 
 
 Tämä on MyHealthDiary-sovelluksen backend. Sovellus auttaa käyttäjiä seuraamaan hyvinvointiaan päiväkirjamerkinnöillä ja tilastoilla.
 
