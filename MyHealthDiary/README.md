@@ -106,7 +106,7 @@ Authorization Bearer <your token>
 ![Kirjautuminen](src/assets//kirjaudu.png)
 
 ### Rekisteröityminen
-![Rekisteröityminen](sra/assets/rekisteroidy.png)
+![Rekisteröityminen](src/assets/rekisteroidy.png)
 
 ### Omat sivut
 ![Omat sivut](src/assets/omat-sivut.png)
