@@ -17,7 +17,7 @@ Tämä on MyHealthDiary-sovelluksen backend. Sovellus auttaa käyttäjiä seuraa
 - **MenstrualCycle**: Kuukautiskierron merkinnät
 
 Alla on sovelluksen tietokantarakenne, joka sisältää taulut ja yhteydet.
-![Tietokantakaavio](images/tietokanta.png)
+![Tietokantakaavio](src/assets//tietokanta.png)
 
 ## Toteutetut ja toteuttamatta jääneet toiminnot
 ## HUOM! Vaikka kaikkia suunniteltuja toimintoja en ehtinyt toteuttaa, tietokantarakenne ja API reittejä on suunniteltu niiden mahdollistamiseksi.
@@ -100,13 +100,13 @@ Authorization Bearer <your token>
 
 
 ### Etusivu
-![Etusivu](images/etusivu.png)
+![Etusivu](src/assets/etusivu.png)
 
 ### Kirjautuminen
-![Kirjautuminen](images/kirjaudu.png)
+![Kirjautuminen](src/assets//kirjaudu.png)
 
 ### Rekisteröityminen
-![Rekisteröityminen](images/rekisteroidy.png)
+![Rekisteröityminen](sra/assets/rekisteroidy.png)
 
 ### Omat sivut
 ![Omat sivut](src/assets/omat-sivut.png)
