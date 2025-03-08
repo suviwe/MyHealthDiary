@@ -1,15 +1,11 @@
 
 
 
-import { fetchData } from "./fetch.js";
-
-
-
 const snackbar = document.getElementById('snackbar');
 
 const showSnackbar = (message, type = '') => {
   snackbar.innerText = message;
-  snackbar.className = `show ${type}`.trim(); // Add optional type class (e.g., 'error')
+  snackbar.className = `show ${type}`.trim(); 
 
   setTimeout(() => {
     snackbar.className = snackbar.className.replace('show', '').trim();
@@ -144,7 +140,7 @@ document.addEventListener("diaryEntryRequest", async function (event) {
 
     // Tyhjennetään lomake
         document.querySelector("#diary-form").reset();
-});
+}); 
 
 
 
@@ -236,11 +232,11 @@ const displayEntries = (entries) => {
             <p><strong>Muistiinpanot:</strong> ${entry.notes || ""}</p>
         `;
         
-        // Luo napit
+        // Luo napit, luodaan uusi div ja lisätään card-buttons luokka jota voi tyylitellä
         const buttonsDiv = document.createElement("div");
         buttonsDiv.classList.add("card-buttons");
 
-        // Muokkaa-nappi
+        // Muokkaa-nappi (edit-entry on CSS luokka)
         const editButton = document.createElement("button");
         editButton.textContent = "Muokkaa";
         editButton.classList.add("edit-entry");
@@ -308,7 +304,7 @@ const editEntry = (entry) => {
     // Tallennetaan ID piilotettuun kenttään
     document.querySelector("#diary-form").dataset.id = entry.entry_id;
     document.querySelector("#diary-form").classList.add("editing-mode");
-    document.querySelector("#diary-form").scrollIntoView({ behavior: "smooth", block: "start" });
+    document.querySelector("#diary-form").scrollIntoView({ behavior: "smooth", block: "start" }); //block start on näkymän yläreuna
 
 
     //muokkaa napit

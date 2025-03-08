@@ -4,8 +4,9 @@ import {fetchData} from './fetch.js';
 
 
 
-//Rekisteröintipyyntö
+//Rekisteröintipyyntö, kuunnellaan tapahtuma registerrequest modal.js kansiosta
 document.addEventListener('registerRequest', async function(event) {
+    //event.detail on osa customevent objektia
     const { username, password, email } = event.detail;
 
     // Lisää konsoliloki, jotta tiedämme, että tapahtuma tuli oikein

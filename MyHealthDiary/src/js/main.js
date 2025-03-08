@@ -1,8 +1,5 @@
 
-/* function toggleMenu() {
-    let menu = document.querySelector(".nav-links");
-    menu.classList.toggle("active");
- } */
+
 
 console.log("löytyykö nappi" , document.querySelector(".add-diary"));
 

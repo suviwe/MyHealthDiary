@@ -1,9 +1,3 @@
-
-/* function toggleMenu() {
-    let menu = document.querySelector(".nav-links");
-    menu.classList.toggle("active");
-  } */
-  
   
   //modaalin js
   // Haetaan modaalielementti
@@ -19,11 +13,6 @@
   //Haetaan Kirjaudu- ja Rekisteröidy -napit
   const loginBtn = document.getElementById("btn-login");
   const registerBtn = document.getElementById("btn-register");
-
-  // Haetaan lomakkeen kentät
-  //const username = document.getElementById("username");
-  //const email = document.getElementById("email");
-  //const password = document.getElementById("password");
   
   // Avaa modaali, kun Kirjaudu / Rekisteröidy -linkkiä painetaan
   openModalBtn.addEventListener("click", function (event) {
@@ -44,15 +33,6 @@
       modal.style.display = "none";
     }
   });
- 
-  /* //Tarkistaa, että kaikki kentät on täytetty ennen kirjautumista
-  function validateForm() {
-    if (!username.value || !email.value || !password.value) {
-      alert("Täytä kaikki kentät!");
-      return false;
-    }
-    return true;
-  }  */
 
     // Vaihdetaan lomake rekisteröinnistä kirjautumiseen
   document.getElementById("btn-switch-login").addEventListener("click", function () {
@@ -66,23 +46,6 @@
     registerForm.style.display = "flex";
   });
   
-  /* // Kun käyttäjä painaa Kirjaudu-nappia VANHA
-  loginBtn.addEventListener("click", function (event) {
-    event.preventDefault(); // Estetään lomakkeen lähetys
-    if (validateForm()) {
-      alert("Kirjautuminen onnistui!");
-      modal.style.display = "none"; // Suljetaan modaali onnistuneen kirjautumisen jälkeen
-    }
-  });
-  
-  // Kun käyttäjä painaa Rekisteröidy-nappia VANHA
-  registerBtn.addEventListener("click", function (event) {
-    event.preventDefault(); // Estetään lomakkeen lähetys
-    if (validateForm()) {
-      alert("Rekisteröityminen onnistui!");
-      modal.style.display = "none"; // Suljetaan modaali onnistuneen rekisteröitymisen jälkeen
-    }
-  }); */
   
   // Lähetetään tapahtumat auth.js:lle
 loginBtn.addEventListener("click", function (event) {
@@ -90,7 +53,7 @@ loginBtn.addEventListener("click", function (event) {
   const username = document.getElementById('username').value;
   const password = document.getElementById('password').value;
 
-  // Lähetetään tapahtuma loginUser-funktiolle auth.js:ssä
+  // Lähetetään tapahtuma loginUser-funktiolle auth.js:ssä. luo uuden custom eventin nimeltä registerrequest
   const loginEvent = new CustomEvent('loginRequest', {
     detail: { username, password }
   });

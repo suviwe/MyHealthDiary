@@ -7,8 +7,6 @@
     height: 100px;
     width: 80%;
     margin: auto;
-    /*text-align: center; */
-    /*padding-top: 40px;*/
     padding: 0 20px;
     background-color: rgb(250, 184, 126);
     font-size: 20px;
@@ -95,13 +93,11 @@
         position: absolute;
         top: 100px;
         left: 0;
-        /*alla olevat lisätään*/
         left: 50%;
         transform: translateX(-50%);
         width: 80%;
         margin: auto;
         background-color: rgba(250, 184, 126, 0.95);
-        /*text-align: center;*/
         padding: 10px 0;
         z-index: 1000;
         font-size: 30px;
@@ -136,7 +132,6 @@ h1 {
 }
 #diary-form {
     display: flex;
-    
     background-color: rgb(252, 219, 179);
     width: 50%;   
     flex-direction: column;
@@ -206,7 +201,6 @@ textarea {
 
 /*korttien css*/
 .card-area {
-  /*background-color: #dddddd;*/
   display: flex;
   gap: 20px; /* Lisätään hieman isompi väli korttien väliin */
   justify-content: center;
@@ -217,7 +211,6 @@ textarea {
 .card {
   min-height: 250px;
   width: 300px;
-  /*background-color: #e8e9fd;*/
   background-color: rgb(251, 221, 193);
   display: flex; /* Flexbox kortin sisällä */
   flex-direction: row; /* Kuvan ja tekstin vierekkäin */
