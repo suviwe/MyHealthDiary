@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style2.css">
+    <title>Document</title>
+    
+  </head>
+   
+  <body>
+
+    <nav class="clearfix">
+      <div class="navbar">
+          <div class="valikko">
+              <div class="valikon_logo">HyteGym</div>
+  
+              <!-- Burger-menu -->
+              <div class="burger-menu" onclick="toggleMenu()">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </div>
+  
+              <ul class="nav-links">
+                  <li><a href="viikko1.html">Etusivu</a></li>
+                  <li><a href="viikko2_BMI.html">BMI-laskuri</a></li>
+                  <li><a href="LogIn.html">Kirjaudu / Rekisteröidy</a></li>
+                  <li><a href="contact.html">Ota Yhteyttä</a></li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+  
+
+            
+      <main>
+        <div class="card">
+          <img src="image/bmi-image.jpg" alt="BMI Index chart" style="width: 100%" >
+          <h2>Painoindeksilaskuri / BMI-laskuri</h2>
+          <p class="description">
+            Painoindeksilaskurilla voit laskea pituuden ja painon perustella
+            painoindeksin (BMI, Body Mass Index).
+          </p>
+        
+          <form action="">
+            <label for="weight">Anna painosi:</label>
+            <input type="text" id="weight" name="weight" placeholder="kg" >
+            <label for="height">Anna pituutesi:</label>
+            <input type="text" id="height" name="height" placeholder="cm" >
+            <button type="submit" class="btn calculate">Laske indeksi</button>
+          </form>
+        
+          <section class="bmi-table">
+            <p>Mittaustuloksesi: <span class="bmi-score">0</span></p>
+        
+            <table id="bmiTbl" class="table table-bordered">
+              <tbody>
+                <tr class="bmi0-19">
+                  <td>Alipaino</td>
+                  <td>0 - 18.4</td>
+                </tr>
+                <tr class="bmi19-25">
+                  <td>Normaali paino</td>
+                  <td>18.5 - 24.9</td>
+                </tr>
+                <tr class="bmi25-30">
+                  <td>Ylipaino</td>
+                  <td>25.0 - 29,9</td>
+                </tr><tr class="bmi30-35">
+                  <td>Lihavuus I </td>
+                  <td>30,0 - 34,9</td>
+                </tr>
+                <tr class="bmi35-40">
+                  <td>Lihavuus II</td>
+                  <td>35,0 - 39,9</td>
+                </tr>
+                <tr class="bmi40-">
+                  <td>Lihavuus III</td>
+                  <td>40.0 tai enemmän</td>
+                </tr>
+              </tbody>
+            </table>
+        
+            <p>
+              〽️ Analyysi:
+               <span class="analysis">Tähän saat analyysin BMI tuloksestasi</span>
+            </p>
+          </section>
+        </div>
+        </main>
+        <script src = "js/vk2_BMI.js"></script>
+  </body>
+</html>
