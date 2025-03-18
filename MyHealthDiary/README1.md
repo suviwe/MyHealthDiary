@@ -110,6 +110,11 @@ Tämän tiedoston avulla voit asentaa samat paketit toisessa ympäristössä kä
 pip install -r requirements.txt
 ```
 
+Tässä asennettiin Robot Framework, jonka avulla voisaan tehdä ohjelmistojen automaattista testausta. Lisäksi asennettiin tarvittavat työkalut testausta varten. 
+Ensimmäiseksi varmistettiin, että Python on asennettu, jonka jälkeen luotiin erillinen virtuaaliympäristö.
+Lopuksi tarkistettiin, että kaikki asennukset onnistuivat ja tallennettiin tiedät `requirements.txt`-tiedostoon. 
+Tässä asennuksessa siis tehtiin perusasetukset ohjelmistojen automaattista testausta varten, jotta voidaan testata sovelluksen toimivuutta eri tavoin.
+
 
 
 
