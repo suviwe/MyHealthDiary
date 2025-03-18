@@ -70,7 +70,9 @@ rfbrowser init
 
 ### Robotframeworkin asennuksen tarkistus 
 ![robot version tarkistus ja browser ](docs/screenshots/second.png)
+
 ![robot version tarkistus ja browser ](docs/screenshots/third.png)
+
 ![robot version tarkistus ja browser ](docs/screenshots/fourth.png)
 
 
@@ -96,6 +98,7 @@ pip install robotframework-tidy
 pip freeze
 ```
 Tarkista että listastasi löytyy ainakin seuraavat (**HUOM! versionumerot voi olla eri**)
+
 ![moduulien tarkistus ](docs/screenshots/fifth.png)
 
 ### Voit myös ohjata pip freeze- komennon luottelon tiedostoon käyttämällä uudelleen ohjausta. Tämä luo `requirements.txt` tiedoston, joka sisältää kaikki nykyisessä ympäristössä asennetut paketit ja niiden versiot.
