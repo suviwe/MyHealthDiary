@@ -1,7 +1,7 @@
 # Ohjelmistotestaus - yksilötehtävät Suvi Westerberg
 # Projekti - Terveyssovelluksen kehitys
 
-## Tehtävä 1
+## **Tehtävä 1**
 
 Tehtävä 1 dokumentoi vaiheittaiset ohjeet Robot Frameworkin ja siihen liittyvien kirjastojen asennuksen Visual Studio code ympäristössä
 
@@ -115,7 +115,7 @@ Ensimmäiseksi varmistettiin, että Python on asennettu, jonka jälkeen luotiin 
 Lopuksi tarkistettiin, että kaikki asennukset onnistuivat ja tallennettiin tiedät `requirements.txt`-tiedostoon. 
 Tässä asennuksessa siis tehtiin perusasetukset ohjelmistojen automaattista testausta varten, jotta voidaan testata sovelluksen toimivuutta eri tavoin.
 
-## Tehtävä 2
+## **Tehtävä 2**
 Sovelletaan annettua esimerkkiä kirjautumis testistä omalle terveyspäiväkirja-sovellukselle.
 Luodaan automaatiotesti, joka testaa omaan web-sovellukseeni sisäänkirjautumisen toimivuutta.
 
@@ -184,6 +184,7 @@ Nämä tiedostot voivat muuten jäädä projektin juureen ja tehdä kansiosta ep
 
 ```bash
 robot --outputdir outputs tests/loginBrowser_demo.robot
+```
 
 
 

@@ -25,3 +25,5 @@ dist-ssr
 
 /harjoituksia
 .venv
+
+tests/loginKeywords.robot
