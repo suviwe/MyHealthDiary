@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-03-24T18:15:06.343734" rpa="false" schemaversion="5">
+<suite id="s1" name="loginBrowser demo" source="C:\Users\suviw\Desktop\developer\MyHealthDiary\MyHealthDiary\tests\loginBrowser_demo.robot">
+<test id="s1-t1" name="Test LogIn" line="6">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-03-24T18:15:06.532853" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\suviw\\Desktop\\developer\\MyHealthDiary\\MyHealthDiary\\outputs\\browser\\traces\\temp\\2f2b2665-0720-4254-8275-530adcab07b9"}</msg>
+<msg time="2025-03-24T18:15:06.564252" level="INFO">Starting Browser process C:\Users\suviw\Desktop\developer\MyHealthDiary\MyHealthDiary\.venv\Lib\site-packages\Browser\wrapper\index.js using port 59593</msg>
+<msg time="2025-03-24T18:15:06.564398" level="INFO">Node startup parameters: ['node', 'C:\\Users\\suviw\\Desktop\\developer\\MyHealthDiary\\MyHealthDiary\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js', '59593']</msg>
+<msg time="2025-03-24T18:15:07.890049" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\suviw\\Desktop\\developer\\MyHealthDiary\\MyHealthDiary\\outputs\\browser\\traces\\temp\\2f2b2665-0720-4254-8275-530adcab07b9"}</msg>
+<arg>chromium</arg>
+<arg>headless=No</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-03-24T18:15:06.532151" elapsed="1.358181"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-03-24T18:15:08.254351" level="INFO">Successfully initialized new page object and opened url: http://localhost:5173/</msg>
+<msg time="2025-03-24T18:15:08.254440" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>http://localhost:5173/</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-03-24T18:15:07.893976" elapsed="0.360611"/>
+</kw>
+<kw name="Click With Options" owner="Browser">
+<msg time="2025-03-24T18:15:08.255552" level="INFO">Clicks the element 'css=a.openModal'.</msg>
+<arg>css=a.openModal</arg>
+<arg>delay=2s</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-03-24T18:15:08.254922" elapsed="2.100411"/>
+</kw>
+<kw name="Get Title" owner="Browser">
+<msg time="2025-03-24T18:15:10.361122" level="INFO">Title: 'HyteGym sivusto'</msg>
+<arg>==</arg>
+<arg>HyteGym sivusto</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-03-24T18:15:10.355644" elapsed="0.005606"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-03-24T18:15:10.362190" level="INFO">Types the text 'suvi5555' in the given field.</msg>
+<arg>id=username</arg>
+<arg>${Username}</arg>
+<arg>delay=0.1 s</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-03-24T18:15:10.361579" elapsed="0.902388"/>
+</kw>
+<kw name="Type Secret" owner="Browser">
+<arg>id=password</arg>
+<arg>$Password</arg>
+<arg>delay=0.1 s</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given secret from ``variable_name`` into the text field
+found by ``selector``.</doc>
+<status status="PASS" start="2025-03-24T18:15:11.264415" elapsed="0.881995"/>
+</kw>
+<kw name="Click With Options" owner="Browser">
+<msg time="2025-03-24T18:15:12.148590" level="INFO">Clicks the element 'id=btn-login'.</msg>
+<arg>id=btn-login</arg>
+<arg>delay=2 s</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-03-24T18:15:12.147308" elapsed="2.056760"/>
+</kw>
+<msg time="2025-03-24T18:15:14.208445" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-03-24T18:15:06.531230" elapsed="7.673270"/>
+</test>
+<status status="PASS" start="2025-03-24T18:15:06.345377" elapsed="7.864259"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="loginBrowser demo" id="s1" pass="1" fail="0" skip="0">loginBrowser demo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

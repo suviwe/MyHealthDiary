@@ -1,0 +1,14 @@
+{"level":30,"time":"2025-03-24T15:05:53.705Z","pid":12568,"hostname":"Supsu","msg":"Listening on 58113"}
+(node:12568) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-03-24T15:05:53.848Z","pid":12568,"hostname":"Supsu","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-03-24T15:05:54.053Z","pid":12568,"hostname":"Supsu","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
+{"level":30,"time":"2025-03-24T15:05:54.054Z","pid":12568,"hostname":"Supsu","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-03-24T15:05:54.054Z","pid":12568,"hostname":"Supsu","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-03-24T15:05:54.064Z","pid":12568,"hostname":"Supsu","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-24T15:05:54.065Z","pid":12568,"hostname":"Supsu","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-24T15:05:54.092Z","pid":12568,"hostname":"Supsu","msg":"Changed active context"}
+{"level":30,"time":"2025-03-24T15:05:54.305Z","pid":12568,"hostname":"Supsu","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-24T15:05:54.307Z","pid":12568,"hostname":"Supsu","msg":"Changed active page"}
+{"level":30,"time":"2025-03-24T15:05:54.492Z","pid":12568,"hostname":"Supsu","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-24T15:07:39.597Z","pid":12568,"hostname":"Supsu","msg":"Removed page=66bcaa03-ae1c-4361-b18c-a8b119add129 from context=767edbbe-c465-4bb5-86fe-6b8ae1a9cf40 page stack"}

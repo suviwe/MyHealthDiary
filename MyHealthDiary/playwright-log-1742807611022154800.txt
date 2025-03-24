@@ -1,0 +1,34 @@
+{"level":30,"time":"2025-03-24T09:13:31.606Z","pid":21672,"hostname":"Supsu","msg":"Listening on 52392"}
+(node:21672) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-03-24T09:13:32.180Z","pid":21672,"hostname":"Supsu","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-03-24T09:13:32.354Z","pid":21672,"hostname":"Supsu","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
+{"level":30,"time":"2025-03-24T09:13:32.355Z","pid":21672,"hostname":"Supsu","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-03-24T09:13:32.355Z","pid":21672,"hostname":"Supsu","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-03-24T09:13:32.371Z","pid":21672,"hostname":"Supsu","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-24T09:13:32.372Z","pid":21672,"hostname":"Supsu","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-24T09:13:32.383Z","pid":21672,"hostname":"Supsu","msg":"Changed active context"}
+{"level":30,"time":"2025-03-24T09:13:32.565Z","pid":21672,"hostname":"Supsu","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-24T09:13:32.566Z","pid":21672,"hostname":"Supsu","msg":"Changed active page"}
+{"level":30,"time":"2025-03-24T09:13:32.671Z","pid":21672,"hostname":"Supsu","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-24T09:13:32.678Z","pid":21672,"hostname":"Supsu","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-24T09:13:32.679Z","pid":21672,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with css=a.openModal in page."}
+{"level":30,"time":"2025-03-24T09:13:32.898Z","pid":21672,"hostname":"Supsu","msg":"End of node method click"}
+{"level":30,"time":"2025-03-24T09:13:32.908Z","pid":21672,"hostname":"Supsu","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-24T09:13:32.909Z","pid":21672,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with [name=\"username\"] in page."}
+================= Original suppressed error =================
+locator.fill: Error: strict mode violation: locator('[name="username"]') resolved to 2 elements:
+    1) <input type="text" required="" id="username" name="username" placeholder="Käyttäjänimesi"/> aka getByRole('textbox', { name: 'Käyttäjänimesi: Käyttäjä' })
+    2) <input type="text" required="" name="username" id="username-register" placeholder="Käyttäjänimesi"/> aka locator('#username-register')
+
+Call log:
+[2m  - waiting for locator('[name="username"]')[22m
+
+    at typeText (C:\Users\suviw\Desktop\developer\MyHealthDiary\MyHealthDiary\.venv\Lib\site-packages\Browser\wrapper\index.js:11836:19)
+    at async PlaywrightServer.typeText (C:\Users\suviw\Desktop\developer\MyHealthDiary\MyHealthDiary\.venv\Lib\site-packages\Browser\wrapper\index.js:13132:28)
+{"level":30,"time":"2025-03-24T09:13:32.923Z","pid":21672,"hostname":"Supsu","msg":"Error of node method  typeText"}
+=============================================================
+{"level":30,"time":"2025-03-24T09:13:32.949Z","pid":21672,"hostname":"Supsu","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-03-24T09:13:32.949Z","pid":21672,"hostname":"Supsu","Take screenshot with options: ":{"path":"C:\\Users\\suviw\\Desktop\\developer\\MyHealthDiary\\MyHealthDiary\\browser\\screenshot\\fail-screenshot-1.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2025-03-24T09:13:33.161Z","pid":21672,"hostname":"Supsu","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-03-24T10:43:17.736Z","pid":21672,"hostname":"Supsu","msg":"Removed page=47060292-c36e-4bce-b075-bfbf7224bdc7 from context=6b324b31-f8be-4011-9df1-318a052f7acc page stack"}

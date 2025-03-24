@@ -115,6 +115,81 @@ Ensimmäiseksi varmistettiin, että Python on asennettu, jonka jälkeen luotiin 
 Lopuksi tarkistettiin, että kaikki asennukset onnistuivat ja tallennettiin tiedät `requirements.txt`-tiedostoon. 
 Tässä asennuksessa siis tehtiin perusasetukset ohjelmistojen automaattista testausta varten, jotta voidaan testata sovelluksen toimivuutta eri tavoin.
 
+## Tehtävä 2
+Sovelletaan annettua esimerkkiä kirjautumis testistä omalle terveyspäiväkirja-sovellukselle.
+Luodaan automaatiotesti, joka testaa omaan web-sovellukseeni sisäänkirjautumisen toimivuutta.
+
+## Mitä testi tekee?
+
+Testi tekee seuraavat toiminnot:
+1. Avaa web-sovellukseni osoitteessa `http://localhost:5173/`
+2. Klikkaa painiketta "Kirjaudu / Rekisteröidy", jolloin avautuu modaalilomake
+3. Täyttää käyttäjätunnuksen ja salasanan automaattisesti
+4. Klikkaa "Kirjaudu sisään" -painiketta
+5. Tarkistaa, että kirjautuminen onnistuu (esimerkiksi "Omat Sivut" -linkki ilmestyy näkyviin)
+
+## Testin rakenne
+
+Testi on kirjoitettu `loginBrowser_demo.robot`-tiedostoon. Alla esimerkki testikoodista:
+
+```robot
+*** Settings ***
+Library     Browser    auto_closing_level=KEEP
+Resource    loginKeywords.robot  
+
+*** Test Cases ***
+Test LogIn
+    New Browser    chromium    headless=No  
+    New Page       http://localhost:5173/
+    Click With Options    css=a.openModal    delay=2 s
+
+    Get Title      ==    HyteGym sivusto
+    Type Text      id=username        ${Username}    delay=0.1 s 
+    Type Secret    id=password        ${Password}    delay=0.1 s
+    Click With Options    id=btn-login    delay=2 s
+```
+**Tämä testi ajetaan komennolla:** `robot tests/loginBrowser_demo.robot
+`
+## Tunnukset
+
+Testissä käytetään seuraavia tunnuksia käyttäjän kirjautumistietojen tallentamiseen. Näihin syötetään sellaiset tunnukset, joilla kirjautuminen onnistuu web-sovellukseen. Nämä tiedot tallennetaan esimerkiksi `loginKeywords.robot` kansioon, jota `loginBrowser_demo.robot` kuuntelee koodia ajaessaan
+
+```robot
+*** Variables ***
+${Username}     tähän toimiva käyttäjätunnus 
+${Password}     tähän toimiva salasana
+```
+
+### Testikansiot ja tiedostot
+- `tests/` on kansio, jossa kaikki testit sijaitsevat
+- `loginBrowser_demo.robot` sisältää itse testin
+- `loginKeywords.robot` voi sisältää tunnuksia ja avainsanoja
+
+## Esimerkkikuva onnistuneesta testistä.
+Kun testi onnistuu niin tulee **PASS**, alla kuva onnituneen testin tuloksesta:
+![onnistunut testi](docs/screenshots/login_robot.png)
+
+## Tulostiedostojen hallinta
+
+Testiajon jälkeen Robot Framework ja Browser-kirjasto luovat useita loki- ja tulostiedostoja, kuten:
+
+- `output.xml`
+- `log.html`
+- `report.html`
+- `playwright-log-...`
+
+Nämä tiedostot voivat muuten jäädä projektin juureen ja tehdä kansiosta epäsiistin.
+
+**Ratkaisu:** voit ohjata kaikki nämä tiedostot omaan siistiin kansioon, esim. `outputs/`. Lisää `outputs` kansio projektin juureen. Jos teit testit ennen kansion luomista, voit raahata yllä olevat tiedostot sinne. Jatkossa testien tulokset menevät outpust-kansioon ja koodi pysyy siistimpänä. Käyttämällä seuraavaa komentoa, saat **`outputs`** kansion käyttöön:
+
+```bash
+robot --outputdir outputs tests/loginBrowser_demo.robot
+
+
+
+
+
+
 
 
 

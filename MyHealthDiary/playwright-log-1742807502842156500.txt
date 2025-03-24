@@ -1,0 +1,20 @@
+{"level":30,"time":"2025-03-24T09:11:43.496Z","pid":8652,"hostname":"Supsu","msg":"Listening on 52314"}
+(node:8652) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-03-24T09:11:44.010Z","pid":8652,"hostname":"Supsu","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-03-24T09:11:44.216Z","pid":8652,"hostname":"Supsu","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
+{"level":30,"time":"2025-03-24T09:11:44.216Z","pid":8652,"hostname":"Supsu","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-03-24T09:11:44.216Z","pid":8652,"hostname":"Supsu","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-03-24T09:11:44.222Z","pid":8652,"hostname":"Supsu","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-24T09:11:44.223Z","pid":8652,"hostname":"Supsu","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-24T09:11:44.239Z","pid":8652,"hostname":"Supsu","msg":"Changed active context"}
+{"level":30,"time":"2025-03-24T09:11:44.381Z","pid":8652,"hostname":"Supsu","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-24T09:11:44.381Z","pid":8652,"hostname":"Supsu","msg":"Changed active page"}
+{"level":30,"time":"2025-03-24T09:11:44.494Z","pid":8652,"hostname":"Supsu","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-24T09:11:44.499Z","pid":8652,"hostname":"Supsu","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-24T09:11:44.499Z","pid":8652,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with css=a.openModal in page."}
+{"level":30,"time":"2025-03-24T09:11:44.676Z","pid":8652,"hostname":"Supsu","msg":"End of node method click"}
+{"level":30,"time":"2025-03-24T09:11:45.690Z","pid":8652,"hostname":"Supsu","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-03-24T09:11:45.690Z","pid":8652,"hostname":"Supsu","Take screenshot with options: ":{"path":"C:\\Users\\suviw\\Desktop\\developer\\MyHealthDiary\\MyHealthDiary\\browser\\screenshot\\fail-screenshot-1.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2025-03-24T09:11:45.876Z","pid":8652,"hostname":"Supsu","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-03-24T09:11:57.867Z","pid":8652,"hostname":"Supsu","msg":"Removed page=1f72c663-2cdb-44fe-95c5-b4827b774fb3 from context=d10edc9f-23d0-498c-bd42-12bcf2c4588b page stack"}
