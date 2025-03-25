@@ -23,3 +23,4 @@
 {"level":30,"time":"2025-03-24T15:44:42.906Z","pid":33420,"hostname":"Supsu","msg":"Start of node method click"}
 {"level":30,"time":"2025-03-24T15:44:42.906Z","pid":33420,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with id=btn-login in page."}
 {"level":30,"time":"2025-03-24T15:44:44.941Z","pid":33420,"hostname":"Supsu","msg":"End of node method click"}
+{"level":30,"time":"2025-03-24T19:43:20.068Z","pid":33420,"hostname":"Supsu","msg":"Removed page=2d7bf2a3-4c58-48ff-80a1-cd2f788a6930 from context=4ab69c5d-778a-47bb-a4b5-ab7e07b76c11 page stack"}

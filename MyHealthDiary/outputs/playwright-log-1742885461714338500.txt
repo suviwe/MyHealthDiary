@@ -1,0 +1,48 @@
+{"level":30,"time":"2025-03-25T06:51:02.293Z","pid":40568,"hostname":"Supsu","msg":"Listening on 55951"}
+(node:40568) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-03-25T06:51:02.378Z","pid":40568,"hostname":"Supsu","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-03-25T06:51:02.584Z","pid":40568,"hostname":"Supsu","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
+{"level":30,"time":"2025-03-25T06:51:02.585Z","pid":40568,"hostname":"Supsu","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-03-25T06:51:02.585Z","pid":40568,"hostname":"Supsu","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-03-25T06:51:02.593Z","pid":40568,"hostname":"Supsu","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-25T06:51:02.594Z","pid":40568,"hostname":"Supsu","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-25T06:51:02.611Z","pid":40568,"hostname":"Supsu","msg":"Changed active context"}
+{"level":30,"time":"2025-03-25T06:51:02.970Z","pid":40568,"hostname":"Supsu","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-25T06:51:02.970Z","pid":40568,"hostname":"Supsu","msg":"Changed active page"}
+{"level":30,"time":"2025-03-25T06:51:03.080Z","pid":40568,"hostname":"Supsu","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-25T06:51:03.087Z","pid":40568,"hostname":"Supsu","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-25T06:51:03.088Z","pid":40568,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with css=a.openModal in page."}
+{"level":30,"time":"2025-03-25T06:51:05.199Z","pid":40568,"hostname":"Supsu","msg":"End of node method click"}
+{"level":30,"time":"2025-03-25T06:51:05.210Z","pid":40568,"hostname":"Supsu","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-25T06:51:05.211Z","pid":40568,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with id=username in page."}
+{"level":30,"time":"2025-03-25T06:51:15.233Z","pid":40568,"hostname":"Supsu","msg":"Error of node method  typeText"}
+================= Original suppressed error =================
+locator.fill: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for locator('id=username')[22m
+[2m    - locator resolved to <input type="text" required="" id="username" name="username" placeholder="Käyttäjänimesi"/>[22m
+[2m    - fill("")[22m
+[2m  - attempting fill action[22m
+[2m    2 × waiting for element to be visible, enabled and editable[22m
+[2m      - element is not visible[22m
+[2m    - retrying fill action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and editable[22m
+[2m      - element is not visible[22m
+[2m    - retrying fill action[22m
+[2m      - waiting 100ms[22m
+[2m    20 × waiting for element to be visible, enabled and editable[22m
+[2m       - element is not visible[22m
+[2m     - retrying fill action[22m
+[2m       - waiting 500ms[22m
+
+    at typeText (C:\Users\suviw\Desktop\developer\MyHealthDiary\MyHealthDiary\.venv\Lib\site-packages\Browser\wrapper\index.js:11836:19)
+    at async PlaywrightServer.typeText (C:\Users\suviw\Desktop\developer\MyHealthDiary\MyHealthDiary\.venv\Lib\site-packages\Browser\wrapper\index.js:13132:28) {
+  name: 'TimeoutError'
+}
+=============================================================
+{"level":30,"time":"2025-03-25T06:51:15.288Z","pid":40568,"hostname":"Supsu","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-03-25T06:51:15.289Z","pid":40568,"hostname":"Supsu","Take screenshot with options: ":{"path":"C:\\Users\\suviw\\Desktop\\developer\\MyHealthDiary\\MyHealthDiary\\outputs\\browser\\screenshot\\fail-screenshot-1.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2025-03-25T06:51:15.569Z","pid":40568,"hostname":"Supsu","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-03-25T06:51:20.152Z","pid":40568,"hostname":"Supsu","msg":"Removed page=09b9d42b-4a4f-4f52-83ba-db436476f383 from context=d8c9f0c2-6495-4c8a-875b-8a0eb3eca1e4 page stack"}

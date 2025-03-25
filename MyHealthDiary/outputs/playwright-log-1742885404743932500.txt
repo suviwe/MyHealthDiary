@@ -1,0 +1,66 @@
+{"level":30,"time":"2025-03-25T06:50:05.507Z","pid":42276,"hostname":"Supsu","msg":"Listening on 55899"}
+(node:42276) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-03-25T06:50:05.972Z","pid":42276,"hostname":"Supsu","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-03-25T06:50:06.369Z","pid":42276,"hostname":"Supsu","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
+{"level":30,"time":"2025-03-25T06:50:06.370Z","pid":42276,"hostname":"Supsu","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-03-25T06:50:06.370Z","pid":42276,"hostname":"Supsu","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-03-25T06:50:06.377Z","pid":42276,"hostname":"Supsu","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-25T06:50:06.377Z","pid":42276,"hostname":"Supsu","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-25T06:50:06.394Z","pid":42276,"hostname":"Supsu","msg":"Changed active context"}
+{"level":30,"time":"2025-03-25T06:50:06.774Z","pid":42276,"hostname":"Supsu","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-25T06:50:06.774Z","pid":42276,"hostname":"Supsu","msg":"Changed active page"}
+{"level":30,"time":"2025-03-25T06:50:06.891Z","pid":42276,"hostname":"Supsu","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-25T06:50:06.896Z","pid":42276,"hostname":"Supsu","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-25T06:50:06.897Z","pid":42276,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with css=a.openModal in page."}
+{"level":30,"time":"2025-03-25T06:50:09.017Z","pid":42276,"hostname":"Supsu","msg":"End of node method click"}
+{"level":30,"time":"2025-03-25T06:50:09.030Z","pid":42276,"hostname":"Supsu","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-25T06:50:09.030Z","pid":42276,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with id=username in page."}
+{"level":30,"time":"2025-03-25T06:50:09.947Z","pid":42276,"hostname":"Supsu","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-25T06:50:09.951Z","pid":42276,"hostname":"Supsu","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-25T06:50:09.951Z","pid":42276,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with id=password in page."}
+{"level":30,"time":"2025-03-25T06:50:10.858Z","pid":42276,"hostname":"Supsu","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-25T06:50:10.861Z","pid":42276,"hostname":"Supsu","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-25T06:50:10.862Z","pid":42276,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with id=btn-login in page."}
+{"level":30,"time":"2025-03-25T06:50:12.902Z","pid":42276,"hostname":"Supsu","msg":"End of node method click"}
+{"level":30,"time":"2025-03-25T06:50:12.916Z","pid":42276,"hostname":"Supsu","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-25T06:50:12.916Z","pid":42276,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with css=.add-diary in page."}
+{"level":30,"time":"2025-03-25T06:50:15.214Z","pid":42276,"hostname":"Supsu","msg":"End of node method click"}
+{"level":30,"time":"2025-03-25T06:50:15.220Z","pid":42276,"hostname":"Supsu","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-25T06:50:15.221Z","pid":42276,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with id=entry-date in page."}
+{"level":30,"time":"2025-03-25T06:50:15.284Z","pid":42276,"hostname":"Supsu","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-25T06:50:15.289Z","pid":42276,"hostname":"Supsu","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-25T06:50:15.289Z","pid":42276,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with id=mood in page."}
+{"level":30,"time":"2025-03-25T06:50:15.327Z","pid":42276,"hostname":"Supsu","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-25T06:50:15.331Z","pid":42276,"hostname":"Supsu","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-25T06:50:15.332Z","pid":42276,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with id=mood4 in page."}
+{"level":30,"time":"2025-03-25T06:50:25.340Z","pid":42276,"hostname":"Supsu","msg":"Error of node method  click"}
+================= Original suppressed error =================
+locator.click: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for locator('id=mood4')[22m
+[2m    - locator resolved to <input value="4" id="mood4" type="radio" name="mood_intensity"/>[22m
+[2m  - attempting click action[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is not visible[22m
+[2m    - retrying click action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is not visible[22m
+[2m    - retrying click action[22m
+[2m      - waiting 100ms[22m
+[2m    19 × waiting for element to be visible, enabled and stable[22m
+[2m       - element is not visible[22m
+[2m     - retrying click action[22m
+[2m       - waiting 500ms[22m
+
+    at internalClick (C:\Users\suviw\Desktop\developer\MyHealthDiary\MyHealthDiary\.venv\Lib\site-packages\Browser\wrapper\index.js:11890:19)
+    at async click (C:\Users\suviw\Desktop\developer\MyHealthDiary\MyHealthDiary\.venv\Lib\site-packages\Browser\wrapper\index.js:11871:18)
+    at async PlaywrightServer.click (C:\Users\suviw\Desktop\developer\MyHealthDiary\MyHealthDiary\.venv\Lib\site-packages\Browser\wrapper\index.js:13132:28) {
+  name: 'TimeoutError'
+}
+=============================================================
+{"level":30,"time":"2025-03-25T06:50:25.410Z","pid":42276,"hostname":"Supsu","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-03-25T06:50:25.411Z","pid":42276,"hostname":"Supsu","Take screenshot with options: ":{"path":"C:\\Users\\suviw\\Desktop\\developer\\MyHealthDiary\\MyHealthDiary\\outputs\\browser\\screenshot\\fail-screenshot-1.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2025-03-25T06:50:25.630Z","pid":42276,"hostname":"Supsu","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-03-25T06:51:28.003Z","pid":42276,"hostname":"Supsu","msg":"Removed page=a76f94a2-157a-4371-b5ae-bcee1d8bb3cc from context=58aaeae9-b43b-4ce7-b250-34df78962887 page stack"}

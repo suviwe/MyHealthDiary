@@ -1,0 +1,149 @@
+{"level":30,"time":"2025-03-24T18:40:04.207Z","pid":38132,"hostname":"Supsu","msg":"Listening on 49957"}
+(node:38132) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-03-24T18:40:04.718Z","pid":38132,"hostname":"Supsu","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-03-24T18:40:05.130Z","pid":38132,"hostname":"Supsu","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
+{"level":30,"time":"2025-03-24T18:40:05.130Z","pid":38132,"hostname":"Supsu","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-03-24T18:40:05.130Z","pid":38132,"hostname":"Supsu","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-03-24T18:40:05.138Z","pid":38132,"hostname":"Supsu","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-24T18:40:05.139Z","pid":38132,"hostname":"Supsu","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-24T18:40:05.156Z","pid":38132,"hostname":"Supsu","msg":"Changed active context"}
+{"level":30,"time":"2025-03-24T18:40:05.475Z","pid":38132,"hostname":"Supsu","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-24T18:40:05.475Z","pid":38132,"hostname":"Supsu","msg":"Changed active page"}
+{"level":30,"time":"2025-03-24T18:40:05.930Z","pid":38132,"hostname":"Supsu","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-24T18:40:05.948Z","pid":38132,"hostname":"Supsu","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-24T18:40:05.948Z","pid":38132,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with [name=\"my-text\"] in page."}
+{"level":30,"time":"2025-03-24T18:40:06.135Z","pid":38132,"hostname":"Supsu","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-24T18:40:06.139Z","pid":38132,"hostname":"Supsu","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-24T18:40:06.139Z","pid":38132,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with [name=\"my-password\"] in page."}
+{"level":30,"time":"2025-03-24T18:40:06.245Z","pid":38132,"hostname":"Supsu","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-24T18:40:06.248Z","pid":38132,"hostname":"Supsu","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-24T18:40:06.248Z","pid":38132,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with [name=\"my-textarea\"] in page."}
+{"level":30,"time":"2025-03-24T18:40:06.465Z","pid":38132,"hostname":"Supsu","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-24T18:40:06.468Z","pid":38132,"hostname":"Supsu","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-24T18:40:06.469Z","pid":38132,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with button in page."}
+{"level":30,"time":"2025-03-24T18:40:08.705Z","pid":38132,"hostname":"Supsu","msg":"End of node method click"}
+{"level":30,"time":"2025-03-24T18:40:08.711Z","pid":38132,"hostname":"Supsu","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-24T18:40:08.712Z","pid":38132,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with id=message in page."}
+{"level":30,"time":"2025-03-24T18:40:08.760Z","pid":38132,"hostname":"Supsu","msg":"Retrieved text for element id=message containing Received!"}
+{"level":30,"time":"2025-03-24T18:40:08.760Z","pid":38132,"hostname":"Supsu","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-24T18:40:08.769Z","pid":38132,"hostname":"Supsu","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2025-03-24T18:40:08.770Z","pid":38132,"hostname":"Supsu","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2025-03-24T18:40:08.774Z","pid":38132,"hostname":"Supsu","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-24T18:40:08.774Z","pid":38132,"hostname":"Supsu","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-24T18:40:08.887Z","pid":38132,"hostname":"Supsu","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-24T18:40:08.887Z","pid":38132,"hostname":"Supsu","msg":"Changed active page"}
+{"level":30,"time":"2025-03-24T18:40:08.973Z","pid":38132,"hostname":"Supsu","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-24T18:40:08.987Z","pid":38132,"hostname":"Supsu","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-24T18:40:08.987Z","pid":38132,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with [name=\"my-text\"] in page."}
+{"level":30,"time":"2025-03-24T18:40:11.204Z","pid":38132,"hostname":"Supsu","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-24T18:40:11.213Z","pid":38132,"hostname":"Supsu","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2025-03-24T18:40:11.213Z","pid":38132,"hostname":"Supsu","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2025-03-24T18:40:11.217Z","pid":38132,"hostname":"Supsu","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-24T18:40:11.217Z","pid":38132,"hostname":"Supsu","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-24T18:40:11.282Z","pid":38132,"hostname":"Supsu","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-24T18:40:11.282Z","pid":38132,"hostname":"Supsu","msg":"Changed active page"}
+{"level":30,"time":"2025-03-24T18:40:11.359Z","pid":38132,"hostname":"Supsu","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-24T18:40:11.371Z","pid":38132,"hostname":"Supsu","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-24T18:40:11.371Z","pid":38132,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with [name=\"my-text\"] in page."}
+{"level":30,"time":"2025-03-24T18:40:13.645Z","pid":38132,"hostname":"Supsu","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-24T18:40:13.649Z","pid":38132,"hostname":"Supsu","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-24T18:40:13.650Z","pid":38132,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with [name=\"my-password\"] in page."}
+{"level":30,"time":"2025-03-24T18:40:15.018Z","pid":38132,"hostname":"Supsu","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-24T18:40:15.033Z","pid":38132,"hostname":"Supsu","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2025-03-24T18:40:15.033Z","pid":38132,"hostname":"Supsu","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2025-03-24T18:40:15.041Z","pid":38132,"hostname":"Supsu","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-24T18:40:15.041Z","pid":38132,"hostname":"Supsu","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-24T18:40:15.132Z","pid":38132,"hostname":"Supsu","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-24T18:40:15.133Z","pid":38132,"hostname":"Supsu","msg":"Changed active page"}
+{"level":30,"time":"2025-03-24T18:40:15.217Z","pid":38132,"hostname":"Supsu","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-24T18:40:15.231Z","pid":38132,"hostname":"Supsu","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-24T18:40:15.231Z","pid":38132,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with [name=\"my-textarea\"] in page."}
+{"level":30,"time":"2025-03-24T18:40:24.315Z","pid":38132,"hostname":"Supsu","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-24T18:40:24.326Z","pid":38132,"hostname":"Supsu","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2025-03-24T18:40:24.326Z","pid":38132,"hostname":"Supsu","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2025-03-24T18:40:24.331Z","pid":38132,"hostname":"Supsu","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-24T18:40:24.331Z","pid":38132,"hostname":"Supsu","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-24T18:40:24.402Z","pid":38132,"hostname":"Supsu","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-24T18:40:24.402Z","pid":38132,"hostname":"Supsu","msg":"Changed active page"}
+{"level":30,"time":"2025-03-24T18:40:24.466Z","pid":38132,"hostname":"Supsu","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-24T18:40:24.479Z","pid":38132,"hostname":"Supsu","msg":"Start of node method selectOption"}
+{"level":30,"time":"2025-03-24T18:40:24.479Z","pid":38132,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with [name=\"my-select\"] in page."}
+{"level":30,"time":"2025-03-24T18:40:24.528Z","pid":38132,"hostname":"Supsu","msg":"Option entries: 4"}
+{"level":30,"time":"2025-03-24T18:40:24.529Z","pid":38132,"hostname":"Supsu","msg":"End of node method selectOption"}
+{"level":30,"time":"2025-03-24T18:40:24.529Z","pid":38132,"hostname":"Supsu","msg":"Selected entries: 1"}
+{"level":30,"time":"2025-03-24T18:40:24.539Z","pid":38132,"hostname":"Supsu","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2025-03-24T18:40:24.540Z","pid":38132,"hostname":"Supsu","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2025-03-24T18:40:24.544Z","pid":38132,"hostname":"Supsu","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-24T18:40:24.544Z","pid":38132,"hostname":"Supsu","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-24T18:40:24.615Z","pid":38132,"hostname":"Supsu","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-24T18:40:24.615Z","pid":38132,"hostname":"Supsu","msg":"Changed active page"}
+{"level":30,"time":"2025-03-24T18:40:24.687Z","pid":38132,"hostname":"Supsu","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-24T18:40:24.701Z","pid":38132,"hostname":"Supsu","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-24T18:40:24.701Z","pid":38132,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with [name=\"my-datalist\"] in page."}
+{"level":30,"time":"2025-03-24T18:40:26.225Z","pid":38132,"hostname":"Supsu","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-24T18:40:26.245Z","pid":38132,"hostname":"Supsu","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2025-03-24T18:40:26.245Z","pid":38132,"hostname":"Supsu","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2025-03-24T18:40:26.250Z","pid":38132,"hostname":"Supsu","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-24T18:40:26.250Z","pid":38132,"hostname":"Supsu","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-24T18:40:26.356Z","pid":38132,"hostname":"Supsu","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-24T18:40:26.356Z","pid":38132,"hostname":"Supsu","msg":"Changed active page"}
+{"level":30,"time":"2025-03-24T18:40:26.446Z","pid":38132,"hostname":"Supsu","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-24T18:40:26.461Z","pid":38132,"hostname":"Supsu","msg":"Start of node method checkCheckbox"}
+{"level":30,"time":"2025-03-24T18:40:26.461Z","pid":38132,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with id=my-check-2 in page."}
+{"level":30,"time":"2025-03-24T18:40:26.534Z","pid":38132,"hostname":"Supsu","msg":"End of node method checkCheckbox"}
+{"level":30,"time":"2025-03-24T18:40:27.543Z","pid":38132,"hostname":"Supsu","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2025-03-24T18:40:27.543Z","pid":38132,"hostname":"Supsu","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2025-03-24T18:40:27.546Z","pid":38132,"hostname":"Supsu","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-24T18:40:27.547Z","pid":38132,"hostname":"Supsu","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-24T18:40:27.619Z","pid":38132,"hostname":"Supsu","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-24T18:40:27.619Z","pid":38132,"hostname":"Supsu","msg":"Changed active page"}
+{"level":30,"time":"2025-03-24T18:40:27.704Z","pid":38132,"hostname":"Supsu","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-24T18:40:27.718Z","pid":38132,"hostname":"Supsu","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-24T18:40:27.718Z","pid":38132,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with id=my-radio-2 in page."}
+{"level":30,"time":"2025-03-24T18:40:27.775Z","pid":38132,"hostname":"Supsu","msg":"End of node method click"}
+{"level":30,"time":"2025-03-24T18:40:28.797Z","pid":38132,"hostname":"Supsu","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2025-03-24T18:40:28.798Z","pid":38132,"hostname":"Supsu","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2025-03-24T18:40:28.808Z","pid":38132,"hostname":"Supsu","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-24T18:40:28.809Z","pid":38132,"hostname":"Supsu","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-24T18:40:28.915Z","pid":38132,"hostname":"Supsu","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-24T18:40:28.915Z","pid":38132,"hostname":"Supsu","msg":"Changed active page"}
+{"level":30,"time":"2025-03-24T18:40:29.003Z","pid":38132,"hostname":"Supsu","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-24T18:40:29.016Z","pid":38132,"hostname":"Supsu","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-24T18:40:29.016Z","pid":38132,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with [name=\"my-file\"] in page."}
+{"level":30,"time":"2025-03-24T18:40:29.072Z","pid":38132,"hostname":"Supsu","msg":"End of node method click"}
+{"level":30,"time":"2025-03-24T18:40:30.084Z","pid":38132,"hostname":"Supsu","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2025-03-24T18:40:30.085Z","pid":38132,"hostname":"Supsu","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2025-03-24T18:40:30.090Z","pid":38132,"hostname":"Supsu","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-24T18:40:30.090Z","pid":38132,"hostname":"Supsu","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-24T18:40:30.387Z","pid":38132,"hostname":"Supsu","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-24T18:40:30.387Z","pid":38132,"hostname":"Supsu","msg":"Changed active page"}
+{"level":30,"time":"2025-03-24T18:40:30.556Z","pid":38132,"hostname":"Supsu","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-24T18:40:30.572Z","pid":38132,"hostname":"Supsu","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-24T18:40:30.572Z","pid":38132,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with [name=\"my-colors\"] in page."}
+{"level":30,"time":"2025-03-24T18:40:30.610Z","pid":38132,"hostname":"Supsu","msg":"Error of node method  typeText"}
+================= Original suppressed error =================
+locator.fill: Error: Malformed value
+Call log:
+[2m  - waiting for locator('[name="my-colors"]')[22m
+[2m    - locator resolved to <input type="color" value="#563d7c" name="my-colors" class="form-control form-control-color"/>[22m
+[2m    - fill("")[22m
+[2m  - attempting fill action[22m
+[2m    - waiting for element to be visible, enabled and editable[22m
+
+    at typeText (C:\Users\suviw\Desktop\developer\MyHealthDiary\MyHealthDiary\.venv\Lib\site-packages\Browser\wrapper\index.js:11836:19)
+    at async PlaywrightServer.typeText (C:\Users\suviw\Desktop\developer\MyHealthDiary\MyHealthDiary\.venv\Lib\site-packages\Browser\wrapper\index.js:13132:28)
+=============================================================
+{"level":30,"time":"2025-03-24T18:40:30.644Z","pid":38132,"hostname":"Supsu","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-03-24T18:40:30.644Z","pid":38132,"hostname":"Supsu","Take screenshot with options: ":{"path":"C:\\Users\\suviw\\Desktop\\developer\\MyHealthDiary\\MyHealthDiary\\outputs\\browser\\screenshot\\fail-screenshot-1.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2025-03-24T18:40:30.760Z","pid":38132,"hostname":"Supsu","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-03-24T18:43:06.789Z","pid":38132,"hostname":"Supsu","msg":"Removed page=de59d3f0-6419-40d0-9358-ee98f5bdc57a from context=d53ebfaa-97c7-4a52-a452-f8f1026f3cea page stack"}
+{"level":30,"time":"2025-03-24T18:43:06.790Z","pid":38132,"hostname":"Supsu","msg":"Removed page=d87acd9f-2f6d-4fd1-9292-8506c25b7292 from context=d53ebfaa-97c7-4a52-a452-f8f1026f3cea page stack"}
+{"level":30,"time":"2025-03-24T18:43:06.793Z","pid":38132,"hostname":"Supsu","msg":"Removed page=a23e2789-b273-479b-9c0b-5ee1da4be369 from context=d53ebfaa-97c7-4a52-a452-f8f1026f3cea page stack"}
+{"level":30,"time":"2025-03-24T18:43:06.794Z","pid":38132,"hostname":"Supsu","msg":"Removed page=d99eb279-ade0-4f6d-8c71-9e75a8a86dd4 from context=d53ebfaa-97c7-4a52-a452-f8f1026f3cea page stack"}
+{"level":30,"time":"2025-03-24T18:43:06.796Z","pid":38132,"hostname":"Supsu","msg":"Removed page=32da8996-e31a-416b-9aec-56dd77275250 from context=d53ebfaa-97c7-4a52-a452-f8f1026f3cea page stack"}
+{"level":30,"time":"2025-03-24T18:43:06.797Z","pid":38132,"hostname":"Supsu","msg":"Removed page=3fee6836-5591-40fd-a025-222897926dc1 from context=d53ebfaa-97c7-4a52-a452-f8f1026f3cea page stack"}
+{"level":30,"time":"2025-03-24T18:43:06.799Z","pid":38132,"hostname":"Supsu","msg":"Removed page=586d553a-cc35-4774-806a-e2b31b5927f9 from context=d53ebfaa-97c7-4a52-a452-f8f1026f3cea page stack"}
+{"level":30,"time":"2025-03-24T18:43:06.802Z","pid":38132,"hostname":"Supsu","msg":"Removed page=23afedc0-d1d5-46d7-82b4-0573ef35bc81 from context=d53ebfaa-97c7-4a52-a452-f8f1026f3cea page stack"}
+{"level":30,"time":"2025-03-24T18:43:06.805Z","pid":38132,"hostname":"Supsu","msg":"Removed page=715fd4ff-60b9-4cf5-95e1-18b790a09995 from context=d53ebfaa-97c7-4a52-a452-f8f1026f3cea page stack"}
+{"level":30,"time":"2025-03-24T18:43:06.807Z","pid":38132,"hostname":"Supsu","msg":"Removed page=1251ec5c-2ebe-4f3e-9442-197fb118df9f from context=d53ebfaa-97c7-4a52-a452-f8f1026f3cea page stack"}

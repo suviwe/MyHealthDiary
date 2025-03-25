@@ -1,0 +1,35 @@
+{"level":30,"time":"2025-03-25T07:03:13.099Z","pid":56820,"hostname":"Supsu","msg":"Listening on 56651"}
+(node:56820) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-03-25T07:03:13.559Z","pid":56820,"hostname":"Supsu","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-03-25T07:03:13.926Z","pid":56820,"hostname":"Supsu","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
+{"level":30,"time":"2025-03-25T07:03:13.927Z","pid":56820,"hostname":"Supsu","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-03-25T07:03:13.927Z","pid":56820,"hostname":"Supsu","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-03-25T07:03:13.935Z","pid":56820,"hostname":"Supsu","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-25T07:03:13.936Z","pid":56820,"hostname":"Supsu","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-25T07:03:13.954Z","pid":56820,"hostname":"Supsu","msg":"Changed active context"}
+{"level":30,"time":"2025-03-25T07:03:14.310Z","pid":56820,"hostname":"Supsu","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-25T07:03:14.310Z","pid":56820,"hostname":"Supsu","msg":"Changed active page"}
+{"level":30,"time":"2025-03-25T07:03:14.475Z","pid":56820,"hostname":"Supsu","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-25T07:03:14.483Z","pid":56820,"hostname":"Supsu","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-25T07:03:14.483Z","pid":56820,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with css=a.openModal in page."}
+{"level":30,"time":"2025-03-25T07:03:16.613Z","pid":56820,"hostname":"Supsu","msg":"End of node method click"}
+{"level":30,"time":"2025-03-25T07:03:16.624Z","pid":56820,"hostname":"Supsu","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-25T07:03:16.625Z","pid":56820,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with id=username in page."}
+{"level":30,"time":"2025-03-25T07:03:17.542Z","pid":56820,"hostname":"Supsu","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-25T07:03:17.546Z","pid":56820,"hostname":"Supsu","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-25T07:03:17.546Z","pid":56820,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with id=password in page."}
+{"level":30,"time":"2025-03-25T07:03:18.436Z","pid":56820,"hostname":"Supsu","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-25T07:03:18.439Z","pid":56820,"hostname":"Supsu","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-25T07:03:18.439Z","pid":56820,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with id=btn-login in page."}
+{"level":30,"time":"2025-03-25T07:03:20.464Z","pid":56820,"hostname":"Supsu","msg":"End of node method click"}
+{"level":30,"time":"2025-03-25T07:03:20.473Z","pid":56820,"hostname":"Supsu","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-25T07:03:20.473Z","pid":56820,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with css=.add-diary in page."}
+{"level":30,"time":"2025-03-25T07:03:22.759Z","pid":56820,"hostname":"Supsu","msg":"End of node method click"}
+{"level":30,"time":"2025-03-25T07:03:22.767Z","pid":56820,"hostname":"Supsu","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-25T07:03:22.767Z","pid":56820,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with id=entry-date in page."}
+{"level":30,"time":"2025-03-25T07:03:22.822Z","pid":56820,"hostname":"Supsu","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-25T07:03:22.826Z","pid":56820,"hostname":"Supsu","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-25T07:03:22.826Z","pid":56820,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with id=mood in page."}
+{"level":30,"time":"2025-03-25T07:03:22.862Z","pid":56820,"hostname":"Supsu","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-25T07:04:09.490Z","pid":56820,"hostname":"Supsu","msg":"Removed page=ee26f5ba-20d9-43b2-9fbe-7894298f9ce6 from context=a9be459d-0156-41a9-8f58-14b2e2cdf70c page stack"}
