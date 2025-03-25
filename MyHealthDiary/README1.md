@@ -116,7 +116,6 @@ Lopuksi tarkistettiin, että kaikki asennukset onnistuivat ja tallennettiin tied
 Tässä asennuksessa siis tehtiin perusasetukset ohjelmistojen automaattista testausta varten, jotta voidaan testata sovelluksen toimivuutta eri tavoin.
 
 
-[Siirry Tehtävään 2](#tehtava-2)
 ## Tehtävä 2
 Sovelletaan annettua esimerkkiä kirjautumis testistä omalle terveyspäiväkirja-sovellukselle.
 Luodaan automaatiotesti, joka testaa omaan web-sovellukseeni sisäänkirjautumisen toimivuutta.
