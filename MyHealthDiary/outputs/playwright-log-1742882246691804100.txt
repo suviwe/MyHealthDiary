@@ -153,3 +153,16 @@
 {"level":30,"time":"2025-03-25T05:57:55.852Z","pid":64780,"hostname":"Supsu","msg":"Strict mode is enabled, find Locator with id=message in page."}
 {"level":30,"time":"2025-03-25T05:57:55.880Z","pid":64780,"hostname":"Supsu","msg":"Retrieved text for element id=message containing Received!"}
 {"level":30,"time":"2025-03-25T05:57:55.880Z","pid":64780,"hostname":"Supsu","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-25T08:31:39.229Z","pid":64780,"hostname":"Supsu","msg":"Removed page=e31f135c-1f47-48ac-b4ae-af8b04b3ddf9 from context=1e065b59-15e3-4504-9c05-fbe91491a255 page stack"}
+{"level":30,"time":"2025-03-25T08:31:39.246Z","pid":64780,"hostname":"Supsu","msg":"Removed page=96377454-1e57-4616-a17a-e2998a5e8567 from context=1e065b59-15e3-4504-9c05-fbe91491a255 page stack"}
+{"level":30,"time":"2025-03-25T08:31:39.246Z","pid":64780,"hostname":"Supsu","msg":"Removed page=8ab41ac6-ba85-4e0d-b436-afc1969c425b from context=1e065b59-15e3-4504-9c05-fbe91491a255 page stack"}
+{"level":30,"time":"2025-03-25T08:31:39.247Z","pid":64780,"hostname":"Supsu","msg":"Removed page=4eeba188-4f1c-4cfd-b6b2-b3ad52aa86b9 from context=1e065b59-15e3-4504-9c05-fbe91491a255 page stack"}
+{"level":30,"time":"2025-03-25T08:31:39.249Z","pid":64780,"hostname":"Supsu","msg":"Removed page=4619b2fc-57c8-4014-8886-94ef6c3f8bc3 from context=1e065b59-15e3-4504-9c05-fbe91491a255 page stack"}
+{"level":30,"time":"2025-03-25T08:31:39.249Z","pid":64780,"hostname":"Supsu","msg":"Removed page=0c67d0c5-b5ae-4026-a5ae-da1bf5d2712e from context=1e065b59-15e3-4504-9c05-fbe91491a255 page stack"}
+{"level":30,"time":"2025-03-25T08:31:39.249Z","pid":64780,"hostname":"Supsu","msg":"Removed page=5072a2e0-b4f7-4a34-acb6-ceab85751d30 from context=1e065b59-15e3-4504-9c05-fbe91491a255 page stack"}
+{"level":30,"time":"2025-03-25T08:31:39.250Z","pid":64780,"hostname":"Supsu","msg":"Removed page=9fd49308-47fa-4e35-a342-374eeb6a6cf0 from context=1e065b59-15e3-4504-9c05-fbe91491a255 page stack"}
+{"level":30,"time":"2025-03-25T08:31:39.250Z","pid":64780,"hostname":"Supsu","msg":"Removed page=b8504d51-71b6-4c4a-a3f3-0c96e80f0c07 from context=1e065b59-15e3-4504-9c05-fbe91491a255 page stack"}
+{"level":30,"time":"2025-03-25T08:31:39.252Z","pid":64780,"hostname":"Supsu","msg":"Removed page=472401f1-6ef7-486a-aa9b-902efd2217a8 from context=1e065b59-15e3-4504-9c05-fbe91491a255 page stack"}
+{"level":30,"time":"2025-03-25T08:31:39.252Z","pid":64780,"hostname":"Supsu","msg":"Removed page=8a75983a-24ef-4a19-b3da-71e223f8ebef from context=1e065b59-15e3-4504-9c05-fbe91491a255 page stack"}
+{"level":30,"time":"2025-03-25T08:31:39.253Z","pid":64780,"hostname":"Supsu","msg":"Removed page=37a2ea0a-9b26-410b-a133-2ab573623d16 from context=1e065b59-15e3-4504-9c05-fbe91491a255 page stack"}
+{"level":30,"time":"2025-03-25T08:31:39.253Z","pid":64780,"hostname":"Supsu","msg":"Removed page=17d3bc36-29b0-4933-8625-b49a0d9587df from context=1e065b59-15e3-4504-9c05-fbe91491a255 page stack"}
